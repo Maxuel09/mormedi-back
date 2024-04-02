@@ -8,5 +8,7 @@ Content-Type: application/json
     "username":"pepito",
     "email":"pe@example.org",
     "password":"123",
-    "type_of_rol":""
+    "type_of_rol":"",
+    "profile":""
+    
 }

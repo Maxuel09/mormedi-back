@@ -1,3 +1,4 @@
+import { profile } from "console"
 import { cryptPassword, comparePassword } from "../helpers/crypt.js"
 import { PrismaClient } from "@prisma/client"
 
@@ -20,7 +21,8 @@ const authController = {
                     username,
                     email,
                     password: cryptPassword(password),
-                    type_of_rol: type_of_rol || false
+                    type_of_rol: type_of_rol || false,
+                    profile: profile || "client"
                 }
             });
         } catch (error) {
