@@ -5,8 +5,8 @@ POST {{api}}/register
 Content-Type: application/json
 
 {
-    "username":"juanita",
-    "email":"juani@example.org",
+    "username":"pedro",
+    "email":"pedro@example.org",
     "password":"123",
     "type_of_rol":"",
     "profile":""

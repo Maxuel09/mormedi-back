@@ -15,7 +15,7 @@ const authController = {
             console.log(user)
             if (user) return res.status(400).send("user already exists")
 
-            const { username, email, password, type_of_rol } = req.body;
+            const { username, email, password, type_of_rol,profile } = req.body;
             const newUser = await prisma.users.create({
                 data: {
                     username,
