@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import Clients from './pages/Clients'
+import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+
 
 function App() {
   
   return (
     <>
-      <p>hello mormedi</p>
+      <Header/>
+      <Sidebar/>
+      <Clients/>
     </>
   )
 }
