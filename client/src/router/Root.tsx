@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
 
 
-function App() {
+function Root() {
   
   return (
     <>
@@ -14,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+export default Root
