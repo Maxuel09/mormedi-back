@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import Clients from '../pages/Clients';
+import Headless from '../pages/Headless'
 
 const router = createBrowserRouter([
     {
@@ -13,14 +14,14 @@ const router = createBrowserRouter([
             }
         ],
     },
-    // {
-    //     path: "/login",
-    //     element: <Login />
-    // },
-    // {
-    //     path: "/register",
-    //     element: <Register />
-    // },
+    {
+        path: "/head",
+        element: <Headless />
+    },
+    {
+        path: "/register",
+        element: <Login />
+    },
 ])
 
 export default router;
