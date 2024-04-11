@@ -9,7 +9,7 @@ const Sidebar = () => {
       <div className="menu--list">
         <a href="#" className="item">
           
-          Dashboard
+         home
         </a>
         <a href="#" className="item">
           
