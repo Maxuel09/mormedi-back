@@ -1,6 +1,6 @@
 import Sidebar from '../components/Sidebar'
 import Content from '../components/Content'
-import Profile from '../components/Profile'
+
 const Clients = () => {
   return (
     <div>
@@ -8,7 +8,7 @@ const Clients = () => {
         <Sidebar />
         <div className="dashboard--content">
           <Content />
-          <Profile />
+          
         </div>
       </div>
 
