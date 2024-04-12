@@ -45,7 +45,7 @@ const authController = {
             });
 
             if (newUser) {
-                res.status(200).json({ message: 'User created successfully', newUser })
+                res.status(201).json({ message: 'User created successfully', newUser })
             }
         } catch (error) {
             console.error("Error registering:", error);
