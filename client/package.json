@@ -11,14 +11,9 @@
     "test": "jest"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@headlessui/react": "^1.7.18",
     "@hookform/devtools": "^4.3.1",
     "@mui/material": "^5.15.15",
-||||||| cf9a058
-    "@headlessui/react": "^1.7.18",
-=======
->>>>>>> 4f5c8d9f7ebfaf3904a681ec38cf7854d7734161
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
