@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   background-color: rgb(232, 232, 233);
   width: 500px;
@@ -13,3 +14,15 @@
 .button {
   background-color: red;
 }
+||||||| cf9a058
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D9D9D9;
+}
+>>>>>>> 4f5c8d9f7ebfaf3904a681ec38cf7854d7734161

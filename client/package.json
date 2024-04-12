@@ -11,11 +11,15 @@
     "test": "jest"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@headlessui/react": "^1.7.18",
     "@hookform/devtools": "^4.3.1",
     "@mui/material": "^5.15.15",
+||||||| cf9a058
+    "@headlessui/react": "^1.7.18",
+=======
+>>>>>>> 4f5c8d9f7ebfaf3904a681ec38cf7854d7734161
     "axios": "^1.6.8",
-    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.2",
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-react": "^7.24.1",
+    "@types/axios": "^0.14.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
