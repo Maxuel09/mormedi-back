@@ -58,11 +58,13 @@
   /* font-weight: 500; */
   padding: 25px;
   transition: 0.3s ease-in-out;
-  color: rgb(255, 255, 255);
+  color: rgb(155, 155, 155);
 }
 .menu--list .item:hover{
-
-  color: rgb(142, 142, 142);
+  color: rgb(223, 223, 223);
+}
+.menu--list .item:focus{
+  color: rgb(255, 255, 255);
 }
 
 /* HEADER */
