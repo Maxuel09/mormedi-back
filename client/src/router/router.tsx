@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import Clients from '../pages/Clients';
-import Headless from '../pages/Headless'
-import Login from '../pages/Login';
+import LoginForm from '../pages/LoginForm';
+import RegisterForm from "../pages/RegisterForm"
+
 
 const router = createBrowserRouter([
     {
@@ -16,12 +17,12 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: "/head",
-        element: <Headless />
+        path: "/login",
+        element: <LoginForm />
     },
     {
-        path: "/login",
-        element: <Login />
+        path: "/register",
+        element: <RegisterForm />
     },
 ])
 
