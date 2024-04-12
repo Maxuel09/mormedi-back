@@ -2,7 +2,7 @@ import { HandleUserLogin } from "../middleware/UserHandle";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form'
-import "../style/Login.css"
+
 
 
 interface FormData {

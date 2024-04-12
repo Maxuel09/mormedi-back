@@ -1,4 +1,3 @@
-import '../style/ContentHeader.css'
 const ContentHeader = () => {
     return (
         <div>

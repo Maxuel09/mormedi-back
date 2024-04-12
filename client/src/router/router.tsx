@@ -4,6 +4,7 @@ import LoginForm from '../pages/LoginForm';
 import RegisterForm from "../pages/RegisterForm"
 import Login from '../components/Login';
 import Root from './Root';
+import Sidebar from '../components/Sidebar';
 
 
 const router = createBrowserRouter([
@@ -34,14 +35,11 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Login />
     },
-    // {
-    //     path: "/login",
-    //     element: <Login />
-    // },
-    // {
-    //     path: "/register",
-    //     element: <Register />
-    // },
+    {
+        path: "/sidebar",
+        element: <Sidebar />
+    },
+   
 
 ])
 

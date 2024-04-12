@@ -1,4 +1,3 @@
-import '../style/Sidebar.css'
 import Logo from '../assets/logo.svg'
 import {Link} from "react-router-dom"
 
@@ -6,22 +5,22 @@ const Sidebar = () => {
   return (
     <div className='menu'>
       <div className="logo">
-      <img src={Logo} alt="MORMEDI " />
+        <img src={Logo} alt="MORMEDI " />
       </div>
       <div className="menu--list">
-          <Link to={#} className='item'>
+          <Link to={""} className='item'>
           home
           </Link>
-          <Link to={#} className='item'>
-          customers
+          <Link to={"/clients"} className='item'>
+          clients
           </Link>
-          <Link to={#} className='item'>
+          <Link to={""} className='item'>
           offers
           </Link>
-          <Link to={#} className='item'>
+          <Link to={""} className='item'>
           reports
           </Link>
-          <Link to={#} className='item'>
+          <Link to={""} className='item'>
           workteam
           </Link>    
       </div>
