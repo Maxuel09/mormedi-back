@@ -9,19 +9,19 @@ const Sidebar = () => {
       </div>
       <div className="menu--list">
           <Link to={""} className='item'>
-          home
+          Home
           </Link>
           <Link to={"/clients"} className='item'>
-          clients
+          Clients
           </Link>
           <Link to={""} className='item'>
-          offers
+          Offers
           </Link>
           <Link to={""} className='item'>
-          reports
+          Reports
           </Link>
           <Link to={""} className='item'>
-          workteam
+          Work team
           </Link>    
       </div>
     </div>

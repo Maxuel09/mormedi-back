@@ -1,4 +1,4 @@
-import Sidebar from "../components/Sidebar"
+// import Sidebar from "../components/Sidebar"
 import ContentHeader from "../components/ContentHeader"
 
 
@@ -6,7 +6,7 @@ const Clients = () => {
   return (
     <div>
       <div className="dashboard">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div className="dashboard--content">
           <ContentHeader />
           {/* <Profile /> */}

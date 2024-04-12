@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 
-
 interface FormData {
     email: string;
     password: string;
@@ -21,7 +20,7 @@ const Login = () => {
                 throw new Error('Por favor, ingresa un correo electrónico y una contraseña.');
             }
 
-            const res = await HandleUserLogin(data); // añadir la formdata como arg
+            const res = await HandleUserLogin(""); // añadir la formdata como arg
             console.log(res.data.data.token)
             if (res.data.data.token) {
                 console.log('Logged in!');
