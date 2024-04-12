@@ -1,0 +1,12 @@
+.dashboard{
+    display: flex;
+    
+}
+.dashboard--content{
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    padding: 2rem ;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}

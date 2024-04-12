@@ -9,7 +9,7 @@ const router = createBrowserRouter([
         element: <Root />,
         children: [
             {
-                path: "/",
+                path: "/clients",
                 element: <Clients />
             },
 
@@ -19,6 +19,14 @@ const router = createBrowserRouter([
             }
         ],
     },
+    // {
+    //     path: "/login",
+    //     element: <Login />
+    // },
+    // {
+    //     path: "/register",
+    //     element: <Register />
+    // },
 ])
 
 export default router;

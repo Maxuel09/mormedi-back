@@ -1,14 +1,15 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:4000/auth/";
+const API_URL = "http://localhost:4000/auth";
+
 
 
 const login = async(data:string) => {
     try {
-        const res = await axios.post(`${API_URL}login`, data);
+        const res = await axios.post(`${API_URL}/login`, data);
         return res;
     } catch (error) {
-        console.error('error:', error.message);
+        console.error(' error:');
         throw error;
     }
 
@@ -17,10 +18,10 @@ const login = async(data:string) => {
 
 const register = async (data:string) => {
     try {
-        const res = await axios.post(`${API_URL}register`, data);
+        const res = await axios.post(`${API_URL}/register`, data);
         return res;
     } catch (error) {
-        console.error(' error:', error.message);
+        console.error(' error:');
         throw error;
     }
 

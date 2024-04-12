@@ -1,43 +1,64 @@
-import { HandleUserLogin } from "../middleware/UserHandle"
+import { HandleUserLogin } from "../middleware/UserHandle";
 import { useNavigate } from 'react-router-dom';
-import {useForm} from 'react-hook-form'
+import { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form'
+import "../style/Login.css"
+
+
+interface FormData {
+    email: string;
+    password: string;
+}
 
 const Login = () => {
-    const navigate = useNavigate()
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const navigate = useNavigate();
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+    const [error, setError] = useState<string>('');
 
-    const handleForm = async (loginUser:string) =>{
+    const handleFormSubmit: SubmitHandler<FormData> = async (data) => {
         try {
-            const res = await HandleUserLogin(loginUser)
-            if (res.data.sesiondata.token) {
-                //codeamos aquí✍
-                console.log('Logged in!')
-                navigate("/home");
+            if (!data.email) {
+                throw new Error('Por favor, ingresa un correo electrónico y una contraseña.');
             }
 
+            const res = await HandleUserLogin(data); // añadir la formdata como arg
+            console.log(res.data.data.token)
+            if (res.data.data.token) {
+                console.log('Logged in!');
+                navigate("Clients");
+            }
         } catch (error) {
             console.log('Login failed.');
+            setError('Login failed. Please check your credentials.');
         }
     }
+
     return (
-        <section>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit(handleForm)}>
-                <input
+        <section className="login">
+            <div className="container">
+                <h1>Mormedi</h1>
+            <form onSubmit={handleSubmit(handleFormSubmit)}>
+                    <input
+                    className="email-input"
                     type="email"
                     autoComplete="on"
                     placeholder="Email"
-                    {...register("username", { required: true })}
+                    {...register("email", { required: true })}
                 />
-                <input
+                {errors.email && <span>Por favor, ingresa un correo electrónico válido.</span>}
+                    <input
+                     className="password-input"
                     type="password"
                     autoComplete="on"
                     placeholder="Password"
                     {...register("password", { required: true })}
                 />
-                <input type="submit" value="Login" />
-            </form>
-       </section>
+                {errors.password && <span>Por favor, ingresa una contraseña.</span>}
+                {error && <span>{error}</span>} {/* Muestra el error de inicio de sesión */}
+                        <input type="submit" value="Login" />
+                </form>
+            </div>
+        </section>
     )
 }
 
