@@ -9,9 +9,8 @@ const authController = {
         try {
             const { email, password } = req.body
             const user = await prisma.users.findUnique({
-                where: {
-                    email: email,
-                }
+                where: { email: email },
+                select: { id: true, email: true, password: true }
             })
             if(!user) return res.status(400).send("user not exists")
             const isMatch = comparePassword(password, user.password)
@@ -32,7 +31,6 @@ const authController = {
     register: async (req, res) => {
         try {
             const user = await prisma.users.findUnique({ where: { email: req.body.email }})
-            console.log(user)
             if (user) return res.status(400).send("user already exists")
 
             const { username, email, password, type_of_rol, profile } = req.body;
