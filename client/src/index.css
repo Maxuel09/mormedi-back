@@ -20,6 +20,7 @@
   height: 1024px;
   margin: 200px auto;
   background-color: #E5E5E5;
+  position: relative;
 }
 
 /* SIDEBAR */
@@ -64,26 +65,40 @@
   color: rgb(142, 142, 142);
 }
 
+/* HEADER */
 
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 4.5rem;
+}
 
-/* .dashboard--content{
+.header h3 {
+  position: absolute;
+  right: 250px;
+}
+
+.dashboard--content{
   background-color: rgb(159, 33, 33);
   flex: 1;
   padding: 2rem;
   display: flex;
   gap: 1.5rem;
   justify-content: space-between;
-} */
+}
 
 
 /* SEARCH BOX */
 
 .search-box {
   display: flex;
+  background-color: red;
+  border: 1px solid rgb(0, 0, 0);
   line-height: 28px;
   align-items: center;
   position: relative;
   max-width: 190px;
+  margin: -60px auto 0;
 }
 
 .input {
@@ -93,7 +108,6 @@
   padding: 0 1rem;
   padding-left: 2.5rem;
   border: 2px solid transparent;
-  
   outline: none;
   background-color: #f3f3f4;
   color: #0d0c22;
@@ -150,6 +164,21 @@ input:hover {
   justify-content: center;
   align-items: center;
   border: 2px solid black;
+}
+
+/* CLIENTS */
+
+.containerClients {
+  width: 1000px;
+  height: 490px;
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  top: 280px;
+  left: 300px
+}
+
+.containerClients h1 {
+  padding: 1.5rem;
 }
 
 
