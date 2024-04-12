@@ -10,10 +10,9 @@ function App() {
 
   return (
     <>
-
-
-      {/* <Header/> */}
-      <Outlet />
+      <Header/>
+      {/* <Sidebar/> */}
+      <Outlet/>
     </>
   )
 }
