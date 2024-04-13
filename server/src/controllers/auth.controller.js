@@ -40,7 +40,6 @@ const authController = {
                     email,
                     password: cryptPassword(password),
                     type_of_rol: type_of_rol || false,
-                    profile: profile || "client"
                 }
             });
 
