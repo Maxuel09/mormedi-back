@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <div className='menu'>
       <div className="logo">
-        <img src={Logo} alt="MORMEDI " />
+        <img src={Logo} alt="logo Mormedi" />
       </div>
       <div className="menu--list">
           <Link to={""} className='item'>

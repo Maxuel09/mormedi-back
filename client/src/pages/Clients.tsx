@@ -1,4 +1,4 @@
-
+import ClientDetails from "../components/ClientDetails"
 
 
 const Clients = () => {
@@ -11,6 +11,16 @@ const Clients = () => {
                 <input placeholder="Search" type="search" className="input"/>
                 </div>
             </div>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
+            <ClientDetails/>
     </div>
   )
 }

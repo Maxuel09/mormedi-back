@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
-import { TextField, Button, Stack } from "@mui/material";
+import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 type FormValues = {
   email: string;
@@ -42,27 +44,26 @@ const LoginForm = () => {
 
 
   return (
-    <div className="container">
+    <div className="container-login">
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <Stack spacing={2} width={400}>
-          <TextField
-            label="Email"
-            type="email"
-            {...register("email", { required: "Email is required" })}
+        <img src={Logo} alt="logo mormedi" className="logo"/>
+        <p className="top">making tomorrow more tangible</p> 
+          <label htmlFor="email">Email</label>
+             <input type="text"  id="email" 
+           {...register("email", { required: "Email is required" })}
             error={!!errors.email}
             helperText={errors.email?.message}
           />
-          <TextField
-            label="Password"
-            type="password"
+          <label htmlFor="password">Password</label>
+          <input type="text" id="password"
             {...register("password", { required: "Password is required" })}
             error={!!errors.password}
             helperText={errors.password?.message}
           />
-          <Button type="submit" variant="contained" color="primary">
-            Login
-          </Button>
-        </Stack>
+         <button type="submit">Login</button>
+          <Link to={"/register"}className="bottom">
+              <p >you have not registered?</p> 
+          </Link>
       </form>
       <DevTool control={control} />
     </div>

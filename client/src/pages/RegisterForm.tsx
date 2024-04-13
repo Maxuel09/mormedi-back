@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
-import { TextField, Button, Stack } from "@mui/material";
+import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 type FormValues = {
   name: string  
@@ -8,6 +11,9 @@ type FormValues = {
   password: string;
 };
 const LoginForm = () => {
+
+  const navigate = useNavigate()
+
   const {
     handleSubmit,
     register,
@@ -23,37 +29,40 @@ const LoginForm = () => {
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
+    navigate("/")
+    
   };
 
   return (
-    <div className="container">
+    <div className="container-register">
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <Stack spacing={2} width={400}>
-          <TextField
-            label="Name"
-            type="name"
-            {...register("name", { required: "Name is required" })}
+        <img src={Logo} alt="logo mormedi" className="logo"/>
+        <p className="top">making tomorrow more tangible</p> 
+          <label htmlFor="first-name">Name</label>
+             <input type="text"  id="first-name" 
+           {...register("name", { required: "First name is required" })}
             error={!!errors.name}
             helperText={errors.name?.message}
           />
-          <TextField
-            label="Email"
-            type="email"
-            {...register("email", { required: "Email is required" })}
+          <label htmlFor="last-name">Last name</label>
+             <input type="text"  id="last-name" 
+           {...register("lastname", { required: "Last name is required" })}
+            error={!!errors.name}
+            helperText={errors.name?.message}
+          />
+          <label htmlFor="email">Email</label>
+             <input type="text"  id="email" 
+           {...register("email", { required: "Email is required" })}
             error={!!errors.email}
             helperText={errors.email?.message}
           />
-          <TextField
-            label="Password"
-            type="password"
+          <label htmlFor="password">Password</label>
+          <input type="text" id="password"
             {...register("password", { required: "Password is required" })}
             error={!!errors.password}
             helperText={errors.password?.message}
           />
-          <Button type="submit" variant="contained" color="primary">
-            Register
-          </Button>
-        </Stack>
+         <button type="submit">Register</button>
       </form>
       <DevTool control={control} />
     </div>

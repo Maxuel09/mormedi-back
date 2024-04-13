@@ -18,7 +18,7 @@
   font-size: 16px;
   width: 1440px;
   height: 1024px;
-  margin: 200px auto;
+  margin: 0 auto;
   background-color: #E5E5E5;
   position: relative;
 }
@@ -136,51 +136,173 @@ input:hover {
   height: 1rem;
 }
 
-/* LOGIN  */
+/* LOGIN */
 
-.login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top:  50px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
- height: 400px;
-  width: 400px;
+.container-login {
   background-color: #fff;
-  gap: 20px;
-}
-.container {
-  background-color: rgb(232, 232, 233);
   width: 500px;
   height: 550px;
   margin: 250px auto 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: 1px solid black;
+  justify-content:space-around;
   align-items: center;
-  border: 2px solid black;
+  position: relative;
+
 }
+.container-login label {
+  display: block;
+  font-size: 16px;
+  margin-top: 15px;
+  font-family: "Roboto";
+}
+
+.container-login input {
+  display: flex;
+  width: 320px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #fff;
+  margin: 0 auto -5px;
+}
+.container-login button {
+  width: 320px;
+  padding: 5px;
+  background-color: #1D1B4C;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 30px 0
+}
+.container-login button:hover {
+  background-color: #474780;
+}
+.container-login .logo {
+ width: 250px;
+ position: absolute;
+ top: -20px;
+ left: 115px
+}
+.container-login .top {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 50px;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+.container-login .bottom {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.container-login .bottom:hover {
+  color: #9e9ea7;
+}
+
+/* REGISTER */
+
+.container-register {
+  background-color: #fff;
+  width: 500px;
+  height: 550px;
+  margin: 250px auto 0;
+  display: flex;
+  border: 1px solid black;
+  justify-content:space-around;
+  align-items: center;
+  position: relative;
+
+}
+.container-register label {
+  display: block;
+  font-size: 16px;
+  margin-top: 15px;
+  font-family: "Roboto";
+}
+
+.container-register input {
+  display: flex;
+  width: 320px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #fff;
+  margin: 0 auto -5px;
+}
+.container-register button {
+  width: 320px;
+  padding: 5px;
+  background-color: #1D1B4C;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 30px 0
+}
+.container-register button:hover {
+  background-color: #474780;
+}
+.container-register .logo {
+ width: 250px;
+ position: absolute;
+ top: -20px;
+ left: 115px
+}
+.container-register .top {
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+.container-register .bottom {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.container-register .bottom:hover {
+  color: #9e9ea7;
+}
+
 
 /* CLIENTS */
 
 .containerClients {
   width: 1000px;
-  height: 490px;
+  height: 560px;
   background-color: rgb(242, 242, 242);
   position: absolute;
-  top: 280px;
+  top: 260px;
   left: 300px
 }
 
 .containerClients h1 {
   padding: 1.5rem;
+}
+
+/* CLIENTDETIALS */
+
+.clientList {
+ list-style: none;
+ display: flex;
+ justify-content: space-evenly;
+ padding: 10px 20px;
+ margin-top: 5px;
+}
+
+.clientList .underline {
+  border-bottom: 1px solid black;
+  width: 14%;
 }
 
 
