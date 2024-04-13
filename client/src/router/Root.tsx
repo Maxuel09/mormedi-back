@@ -7,6 +7,7 @@ function Root() {
   
   return (
     <>
+      <Header/>
       <Outlet/>
     </>
   )

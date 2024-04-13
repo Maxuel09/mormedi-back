@@ -25,7 +25,7 @@ const Login = () => {
             console.log(res.data.data.token)
             if (res.data.data.token) {
                 console.log('Logged in!');
-                navigate("Clients");
+                navigate("/sidebar");
             }
         } catch (error) {
             console.log('Login failed.');
@@ -37,26 +37,28 @@ const Login = () => {
         <section className="login">
             <div className="container">
                 <h1>Mormedi</h1>
-            <form onSubmit={handleSubmit(handleFormSubmit)}>
+                <h3>making tomorrow <span>tangible</span></h3>
+                <form className="login-form" onSubmit={handleSubmit(handleFormSubmit)}>
                     <input
-                    className="email-input"
-                    type="email"
-                    autoComplete="on"
-                    placeholder="Email"
-                    {...register("email", { required: true })}
-                />
-                {errors.email && <span>Por favor, ingresa un correo electrónico válido.</span>}
+                        className="email-input"
+                        type="email"
+                        autoComplete="on"
+                        {...register("email", { required: true })}
+                    />
+                    <span className="placeholder">email</span>
+                    {errors.email && <span>Por favor, ingresa un correo electrónico válido.</span>}
                     <input
-                     className="password-input"
-                    type="password"
-                    autoComplete="on"
-                    placeholder="Password"
-                    {...register("password", { required: true })}
-                />
-                {errors.password && <span>Por favor, ingresa una contraseña.</span>}
-                {error && <span>{error}</span>} {/* Muestra el error de inicio de sesión */}
-                        <input type="submit" value="Login" />
+                        className="password-input"
+                        type="password"
+                        autoComplete="on"
+                        {...register("password", { required: true })}
+                    />
+                    <span className="placeholder">password</span>
+                    {errors.password && <span>Por favor, ingresa una contraseña.</span>}
+                    {error && <span>{error}</span>} {/* Muestra el error de inicio de sesión */}
+                    <input className="login-button" type="submit" value="Login" />
                 </form>
+
             </div>
         </section>
     )
