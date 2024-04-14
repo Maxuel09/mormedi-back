@@ -304,6 +304,9 @@ input:hover {
   border-bottom: 1px solid black;
   width: 14%;
 }
+.clientList img {
+  color: #1D1B4C;
+}
 
 
 
