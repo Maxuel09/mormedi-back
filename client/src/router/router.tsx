@@ -3,6 +3,7 @@ import Clients from '../pages/Clients';
 import LoginForm from '../pages/LoginForm';
 import RegisterForm from "../pages/RegisterForm"
 import Root from './Root';
+import LoginZod from "../pages/LoginZod"
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <LoginForm />
+        element: <LoginZod />
     },
     {
         path: "/register",
