@@ -13,19 +13,19 @@ const Sidebar = () => {
         </a>
         <a href="#" className="item">
           
-        customers
+        Customers
         </a>
         <a href="#" className="item">
           
-        offers
+        Offers
         </a>
         <a href="#" className="item">
           
-        reports
+        Reports
         </a>
         <a href="#" className="item">
           
-        work team
+        Work team
         </a>
         
       </div>
