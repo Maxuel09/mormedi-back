@@ -9,7 +9,7 @@ import { resolve } from "path";
 
 const LoginForm = () => {
   const {
-    control
+    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
