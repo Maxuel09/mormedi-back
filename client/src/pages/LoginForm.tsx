@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import {z} from "zod"
 import { zodResolver } from "@hookform/resolvers/zod";
 
