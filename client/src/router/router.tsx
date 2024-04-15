@@ -4,6 +4,7 @@ import LoginForm from '../pages/LoginForm';
 import RegisterForm from "../pages/RegisterForm"
 import Root from './Root';
 import LoginZod from "../pages/LoginZod"
+import RegisterZod from "../pages/RegisterZod"
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/register",
-        element: <RegisterForm />
+        element: <RegisterZod />
     },
 ])
 

@@ -2,20 +2,21 @@ import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {z} from "zod"
 import type { FieldValues } from "react-hook-form";
 import { resolve } from "path";
 
 const LoginForm = () => {
   const {
+    control
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
     getValues,
   } = useForm();
+ 
 
   const onSubmit = async (data:FieldValues) => {
     await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -61,7 +62,7 @@ const LoginForm = () => {
               <p >you have not registered?</p> 
           </Link>
       </form>
-      {/* <DevTool control={control} /> */}
+      <DevTool control={control} />
     </div>
   );
 };
