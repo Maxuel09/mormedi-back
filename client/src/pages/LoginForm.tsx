@@ -4,14 +4,8 @@ import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import {z} from "zod"
-import { zodResolver } from "@hookform/resolvers/zod";
-
-const loginSchema = z.object({
-  email: z.string().email(),
-  password: z.string()
-})
-
-type LoginSchema = z.infer<typeof loginSchema>
+import type { FieldValues } from "react-hook-form";
+import { resolve } from "path";
 
 const LoginForm = () => {
   const {
@@ -20,18 +14,14 @@ const LoginForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<LoginSchema>({
-    resolver: zodResolver(loginSchema),
-  });
+    getValues,
+  } = useForm();
  
-  const onSubmit = async (data: LoginSchema) => {
-    const response = await axios.post("https://your-api-endpoint.com/login", {
-      email: data.email,
-      password: data.password,
-    });
-    console.log(response);
+
+  const onSubmit = async (data:FieldValues) => {
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     reset();
-  };
+  }
   
   return (
     <div className="container-login">
@@ -41,8 +31,9 @@ const LoginForm = () => {
           <label htmlFor="email">Email</label>
           <input 
           {
-           ...register("email" 
-            )}
+           ...register("email",  
+            {required: "Email is required",
+          })}
           type="email"  
           id="email" 
           />
@@ -52,7 +43,8 @@ const LoginForm = () => {
           <label htmlFor="password">Password</label>
           <input
           {
-            ...register("password"
+            ...register("password", 
+            {required: "Password is required"}
           )}
           type="password" 
           id="password"

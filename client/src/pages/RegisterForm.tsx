@@ -2,20 +2,13 @@ import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import {useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {z} from "zod"
-import { zodResolver } from "@hookform/resolvers/zod";
+import type { FieldValues } from "react-hook-form";
+import { resolve } from "path";
 
-const registerSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
-  email: z.string().email(),
-  password: z.string().min(5, "Must be a least 5 characters")
-})
 
-type RegisterSchema = z.infer<typeof registerSchema>
-
-const RegisterForm = () => {
+const LoginForm = () => {
 
   const navigate = useNavigate()
 
@@ -25,21 +18,15 @@ const RegisterForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<RegisterSchema>({
-    resolver: zodResolver(registerSchema),
-  });
+    getValues
+  } = useForm();
 
- const onSubmit = async (data: RegisterSchema) => {
-    const response = await axios.post("https://your-api-endpoint.com/register", {
-      firstName: data.firstName,
-      lastName: data.lastName,
-      email: data.email,
-      password: data.password,
-    });
-    console.log(response);
+  const onSubmit = async (data: FormValues) => {
+    console.log(data);
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     reset();
-    navigate('/')
-  }
+    // navigate("/");
+  };
 
   return (
     <div className="container-register">
@@ -50,7 +37,8 @@ const RegisterForm = () => {
           <input 
           {
             ...register("firstName",
-           )}
+            { required: "First name is required",
+            })}
           type="text"  
           id="firstName" 
           />
@@ -61,7 +49,8 @@ const RegisterForm = () => {
           <input 
           {
             ...register("lastName", 
-           )}
+             {required: "Last name is required",         
+            })}
               type="text"  
               id="lastName" 
           />
@@ -72,7 +61,8 @@ const RegisterForm = () => {
           <input 
           {
             ...register("email", 
-           )}
+            { required: "Email is required",              
+            })}
           type="text"  
           id="email" 
           />
@@ -83,23 +73,19 @@ const RegisterForm = () => {
           <input 
           {
             ...register("password", 
-           )}
+            { required: "Password is required",            
+             })}
           type="text" 
           id="password"
           />
            {errors.password && (
             <p className="errorEmail">{`${errors.password.message}`}</p>
           )}
-         <button 
-         type="submit"
-         disabled={isSubmitting}>
-          Register
-         </button>
+         <button type="submit">Register</button>
       </form>
       <DevTool control={control} />
     </div>
   );
 };
 
-
-export default RegisterForm
+export default LoginForm

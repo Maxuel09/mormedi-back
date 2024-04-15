@@ -1,7 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Clients from '../pages/Clients';
-import LoginForm from '../pages/LoginForm';
-import RegisterForm from "../pages/RegisterForm"
 import Root from './Root';
 import LoginZod from "../pages/LoginZod"
 import RegisterZod from "../pages/RegisterZod"
