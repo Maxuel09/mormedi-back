@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Clients from '../pages/Clients';
 import Root from './Root';
-import LoginZod from "../pages/LoginZod"
-import RegisterZod from "../pages/RegisterZod"
+import LoginForm from "../pages/LoginForm"
+import RegisterForm from "../pages/RegisterForm"
 
 
 const router = createBrowserRouter([
@@ -18,11 +18,11 @@ const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <LoginZod />
+        element: <LoginForm />
     },
     {
         path: "/register",
-        element: <RegisterZod />
+        element: <RegisterForm />
     },
 ])
 
