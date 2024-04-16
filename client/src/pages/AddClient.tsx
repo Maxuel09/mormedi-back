@@ -47,7 +47,7 @@ const LoginForm = () => {
           id="email" 
           />
           {errors.email && (
-            <p className="error">{`${errors.email.message}`}</p>
+            <p className="errorEmail">{`${errors.email.message}`}</p>
           )}
           <label htmlFor="password">Password</label>
           <input
@@ -58,7 +58,7 @@ const LoginForm = () => {
           id="password"
           />
            {errors.password && (
-            <p className="error">{`${errors.password.message}`}</p>
+            <p className="errorPassword">{`${errors.password.message}`}</p>
           )}
          <button 
          type="submit"

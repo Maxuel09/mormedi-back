@@ -1,0 +1,85 @@
+{
+    "clients": [
+      {
+        "Name": "Jan Jansen",
+        "Company": "Shell",
+        "Amount": 30,
+        "Sector": "Chemical",
+        "State": "USE",
+        "Commercial": "Eric Smit"
+      },
+      {
+        "Name": "Alice Smith",
+        "Company": "Tesla",
+        "Amount": 25,
+        "Sector": "Automotive",
+        "State": "USA",
+        "Commercial": "John Doe"
+      },
+      {
+        "Name": "Mohammed Khan",
+        "Company": "ExxonMobil",
+        "Amount": 40,
+        "Sector": "Energy",
+        "State": "UAE",
+        "Commercial": "Emily Jones"
+      },
+      {
+        "Name": "Emma Johnson",
+        "Company": "Google",
+        "Amount": 20,
+        "Sector": "Technology",
+        "State": "USA",
+        "Commercial": "David Brown"
+      },
+      {
+        "Name": "Hans Müller",
+        "Company": "BMW",
+        "Amount": 35,
+        "Sector": "Automotive",
+        "State": "GER",
+        "Commercial": "Anna Schmidt"
+      },
+      {
+        "Name": "Sophie Dupont",
+        "Company": "L'Oréal",
+        "Amount": 28,
+        "Sector": "Cosmetics",
+        "State": "FRA",
+        "Commercial": "Thomas Leclerc"
+      },
+      {
+        "Name": "Chen Wei",
+        "Company": "Alibaba",
+        "Amount": 32,
+        "Sector": "E-commerce",
+        "State": "CHN",
+        "Commercial": "Li Wei"
+      },
+      {
+        "Name": "Ravi Patel",
+        "Company": "Infosys",
+        "Amount": 22,
+        "Sector": "IT Services",
+        "State": "IND",
+        "Commercial": "Priya Sharma"
+      },
+      {
+        "Name": "Maria Garcia",
+        "Company": "Iberdrola",
+        "Amount": 38,
+        "Sector": "Utilities",
+        "State": "ESP",
+        "Commercial": "Carlos Rodriguez"
+      },
+      {
+        "Name": "Yuki Tanaka",
+        "Company": "Toyota",
+        "Amount": 27,
+        "Sector": "Automotive",
+        "State": "JPN",
+        "Commercial": "Satoshi Yamamoto"
+      }
+    ]
+  }
+  
