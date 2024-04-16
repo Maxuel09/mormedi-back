@@ -1,19 +1,31 @@
 import { useForm } from "react-hook-form";
-import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import { Link} from "react-router-dom";
 import {z} from "zod"
 import { zodResolver } from "@hookform/resolvers/zod";
 
-const loginSchema = z.object({
-  email: z.string().email(),
+const addSchema = z.object({
+  fistName: z.string(),
+  lastName: z.string(),
+  title: z.string(),
+  department: z.string(),
+  email: z.string(),
+  cellphone: z.number(),
+  company: z.string(),
+  sector: z.string(),
+  subsector: z.string(),
+  
+
+
+
+
   password: z.string()
+
 })
 
-type LoginSchema = z.infer<typeof loginSchema>
+type addSchema = z.infer<typeof addSchema>
 
-const LoginForm = () => {
+const addClient = () => {
   const {
     control,
     register,
@@ -21,10 +33,10 @@ const LoginForm = () => {
     formState: { errors, isSubmitting },
     reset,
   } = useForm<LoginSchema>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(addSchema),
   });
  
-  const onSubmit = async (data: LoginSchema) => {
+  const onSubmit = async (data: a) => {
     const response = await axios.post("https://your-api-endpoint.com/login", {
       email: data.email,
       password: data.password,
@@ -34,9 +46,8 @@ const LoginForm = () => {
   };
   
   return (
-    <div className="container-login">
+    <div className="container-addClient">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <img src={Logo} alt="logo mormedi" className="logo"/>
         <p className="top">making tomorrow more tangibles</p> 
           <label htmlFor="email">Email</label>
           <input 
@@ -60,15 +71,12 @@ const LoginForm = () => {
            {errors.password && (
             <p className="errorPassword">{`${errors.password.message}`}</p>
           )}
-         <button 
-         type="submit"
-         disabled={isSubmitting}
-         >
-          Login
+         <button >
+          Save
           </button>
-          <Link to={"/register"}className="bottom">
-              <p >you have not registered?</p> 
-          </Link>
+          <button>
+          Cancel  
+          </button>
       </form>
       <DevTool control={control} />
     </div>

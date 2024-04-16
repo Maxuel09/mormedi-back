@@ -182,6 +182,13 @@ input:hover {
 .container-login button:hover {
   background-color: #474780;
 }
+
+.container-login button[type="submit"]:disabled,
+.container-register button[type="submit"]:disabled {
+  background-color: #be0909;
+  color: #666;
+  cursor: not-allowed;
+}
 .container-login .logo {
   width: 250px;
   position: absolute;
