@@ -30,7 +30,7 @@ const RegisterForm = () => {
   });
 
  const onSubmit = async (data: RegisterSchema) => {
-    const response = await axios.post("https://your-api-endpoint.com/register", {
+    const response = await axios.post("MSQ_URL/register", {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
