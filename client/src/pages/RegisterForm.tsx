@@ -55,7 +55,7 @@ const RegisterForm = () => {
           id="firstName" 
           />
           {errors.firstName && (
-           <p className="errorEmail">{`${errors.firstName.message}`}</p>
+           <p className="error">{`${errors.firstName.message}`}</p>
           )}
           <label htmlFor="lastName">Last name</label>
           <input 
@@ -66,7 +66,7 @@ const RegisterForm = () => {
               id="lastName" 
           />
           {errors.lastName && (
-          <p className="errorEmail">{`${errors.lastName.message}`}</p>
+          <p className="error">{`${errors.lastName.message}`}</p>
           )}
           <label htmlFor="email">Email</label>
           <input 
@@ -77,7 +77,7 @@ const RegisterForm = () => {
           id="email" 
           />
           {errors.email && (
-            <p className="errorEmail">{`${errors.email.message}`}</p>
+            <p className="error">{`${errors.email.message}`}</p>
           )}
           <label htmlFor="password">Password</label>
           <input 
@@ -88,7 +88,7 @@ const RegisterForm = () => {
           id="password"
           />
            {errors.password && (
-            <p className="errorEmail">{`${errors.password.message}`}</p>
+            <p className="error">{`${errors.password.message}`}</p>
           )}
          <button 
          type="submit"
