@@ -28,15 +28,25 @@ const authController = {
        }
     },
 
+    getUsers: async (req, res) => {
+        try {
+            const users = await prisma.users.findMany();
+            res.json(users);
+        }catch(error) {
+            console.error(error);
+        }
+    },
+    
     register: async (req, res) => {
         try {
             const user = await prisma.users.findUnique({ where: { email: req.body.email }})
             if (user) return res.status(400).send("user already exists")
 
-            const { username, email, password, type_of_rol} = req.body;
+            const { first_name,last_name, email, password, type_of_rol} = req.body;
             const newUser = await prisma.users.create({
                 data: {
-                    username,
+                    first_name,
+                    last_name,
                     email,
                     password: cryptPassword(password),
                     type_of_rol: type_of_rol || false,

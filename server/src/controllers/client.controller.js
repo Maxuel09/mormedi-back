@@ -15,7 +15,7 @@ const clientController = {
     createClient: async (req, res) => {
         try {
             const newClient = await clientModel.createClient(req.body);
-            res.json(newClient.name, newClient.lastname);
+            res.json(newClient);
             
         }catch(error) {
             console.log(error);

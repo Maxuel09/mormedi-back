@@ -6,17 +6,25 @@ Content-Type: application/json
 
 
 {
-  "name":"neymi",
-  "lastname":"ssss",
-  "qualification":"c",
-  "department":"meta",
-  "company":"face",
-  "telephone":12345,
-  "address":"asd" ,
-  "postal_code":123,   
-  "city":"aaa",       
-  "comments":"mm"    
-
-  
+    "name": "pepe",
+    "lastname": "lorenzo",
+    "qualification": "***",
+    "department": "***",
+    "company": "***",
+    "telephone": 65920113,
+    "address": "japon",
+    "postal_code": 123,
+    "city": "tokio",
+    "comments": "***",
+    "user": {
+      "create":[
+        {
+          
+        }
+      ]
+    }
 }
+
+###
+GET {{api}}/auth/login
 
