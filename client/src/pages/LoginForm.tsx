@@ -2,34 +2,32 @@ import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import { Link} from "react-router-dom";
-import {z} from "zod"
+import { Link, useNavigate} from "react-router-dom";
+import { loginSchema, TLoginSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-const loginSchema = z.object({
-  email: z.string().email(),
-  password: z.string()
-})
 
-type LoginSchema = z.infer<typeof loginSchema>
 
 const LoginForm = () => {
+  const navigate = useNavigate()
+
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<LoginSchema>({
+    control,
+  } = useForm<TLoginSchema>({
     resolver: zodResolver(loginSchema),
   });
  
-  const onSubmit = async (data: LoginSchema) => {
-    const response = await axios.post("https://localhost:4000/auth/login", {
+  const onSubmit = async (data: TLoginSchema) => {
+    const response = await axios.post("http://localhost:3000/users", {
       email: data.email,
       password: data.password,
     });
     console.log(response);
+    navigate("/clients")
     reset();
   };
   
