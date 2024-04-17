@@ -1,10 +1,14 @@
 @api = http://localhost:4000/auth
 
-### login
-POST {{api}}/login
+###
+POST {{api}}/register
 Content-Type: application/json
 
 {
+    "username":"pedro",
     "email":"pedro@example.org",
-    "password":"123"
+    "password":"123",
+    "type_of_rol":"",
+    "profile":""
+    
 }
