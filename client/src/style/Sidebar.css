@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 2.3rem;
     height: 99vh;
-    scorll:none;
+    scroll-behavior:smooth;
     background-color: #1D1B4C;
 }
 .logo{
