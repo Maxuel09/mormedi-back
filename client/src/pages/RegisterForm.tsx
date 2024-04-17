@@ -1,25 +1,13 @@
 import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
-import axios from "axios";
-<<<<<<< HEAD
-import { Link, useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-
-type FormValues = {
-  name: string  
-  email: string;
-  password: string;
-};
-const LoginForm = () => {
-=======
 import {useNavigate } from "react-router-dom";
 import {z} from "zod"
 import { zodResolver } from "@hookform/resolvers/zod";
+import { HandleRegisterUser } from "../middleware/UserHandle";
 
 const registerSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
+  username: z.string(),
   email: z.string().email(),
   password: z.string().min(5, "Must be a least 5 characters")
 })
@@ -27,61 +15,10 @@ const registerSchema = z.object({
 type RegisterSchema = z.infer<typeof registerSchema>
 
 const RegisterForm = () => {
->>>>>>> 597e925f7678aca6105300c92edfa820eb46889e
 
   const navigate = useNavigate()
 
   const {
-<<<<<<< HEAD
-    handleSubmit,
-    register,
-    formState: { errors },
-    control,
-  } = useForm<FormValues>({
-    defaultValues: {
-      name: "",
-      email: "",
-      password: "",
-    },
-  });
-
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-    navigate("/")
-    
-  };
-
-  return (
-    <div className="container-register">
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <img src={Logo} alt="logo mormedi" className="logo"/>
-        <p className="top">making tomorrow more tangible</p> 
-          <label htmlFor="first-name">Name</label>
-             <input type="text"  id="first-name" 
-           {...register("name", { required: "First name is required" })}
-            error={!!errors.name}
-            helperText={errors.name?.message}
-          />
-          <label htmlFor="last-name">Last name</label>
-             <input type="text"  id="last-name" 
-           {...register("lastname", { required: "Last name is required" })}
-            error={!!errors.name}
-            helperText={errors.name?.message}
-          />
-          <label htmlFor="email">Email</label>
-             <input type="text"  id="email" 
-           {...register("email", { required: "Email is required" })}
-            error={!!errors.email}
-            helperText={errors.email?.message}
-          />
-          <label htmlFor="password">Password</label>
-          <input type="text" id="password"
-            {...register("password", { required: "Password is required" })}
-            error={!!errors.password}
-            helperText={errors.password?.message}
-          />
-         <button type="submit">Register</button>
-=======
     control,
     register,
     handleSubmit,
@@ -91,17 +28,6 @@ const RegisterForm = () => {
     resolver: zodResolver(registerSchema),
   });
 
- const onSubmit = async (data: RegisterSchema) => {
-    const response = await axios.post("MSQ_URL/register", {
-      firstName: data.firstName,
-      lastName: data.lastName,
-      email: data.email,
-      password: data.password,
-    });
-    console.log(response);
-    reset();
-    navigate('/')
-  }
 
   return (
     <div className="container-register">
@@ -157,16 +83,11 @@ const RegisterForm = () => {
          disabled={isSubmitting}>
           Register
          </button>
->>>>>>> 597e925f7678aca6105300c92edfa820eb46889e
       </form>
       <DevTool control={control} />
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default LoginForm
-=======
 
 export default RegisterForm
->>>>>>> 597e925f7678aca6105300c92edfa820eb46889e

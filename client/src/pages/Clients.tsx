@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import Sidebar from "../components/Sidebar"
-=======
 import ClientDetails from "../components/ClientDetails"
->>>>>>> 597e925f7678aca6105300c92edfa820eb46889e
 
 
 const Clients = () => {

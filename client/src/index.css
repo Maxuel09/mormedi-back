@@ -1,8 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: "Sailec-Light";
   src: url("./fonts/Sailec/Sailec-Light.otf") format("truetype");
   /* Add additional src declarations for other font formats if needed */
-}
 
 * {
   margin: 0;
@@ -319,4 +318,4 @@ input:hover {
 }
 .clientList img {
   color: #1d1b4c;
-}
+} 
