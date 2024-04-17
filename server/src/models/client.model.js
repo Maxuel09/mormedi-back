@@ -85,7 +85,7 @@ const prisma = new PrismaClient();
 
 // Eliminar cliente por ID
 
-const clientModel = {
+const ClientModel = {
   deleteClient: async (req, res) => {
     const result = await prisma.client.delete({
       where: {
@@ -106,7 +106,7 @@ createClient: async (req, res) => {
 
 }
 
-export default clientModel;
+export default ClientModel;
 
 
 // // Prueba de las funciones

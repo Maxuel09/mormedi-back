@@ -1,10 +1,10 @@
 import  Routes  from "express";
-import authController from "../controllers/auth.controller.js";
+import AuthController from "../controllers/auth.controller.js";
 
-const routesAuth = Routes();
+const RoutesAuth = Routes();
 
-routesAuth.route('/login').post(authController.login)
-routesAuth.route('/register').post(authController.register)
+RoutesAuth.route('/login').post(AuthController.login)
+RoutesAuth.route('/register').post(AuthController.register)
 
 
-export default routesAuth;
+export default RoutesAuth;

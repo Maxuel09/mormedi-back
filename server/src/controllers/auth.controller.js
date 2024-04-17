@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-const authController = {
+const AuthController = {
     login: (req, res) => {
         res.send("login")
     },
@@ -36,4 +36,4 @@ const authController = {
     }
 }
 
-export default authController
+export default AuthController

@@ -1,14 +1,14 @@
 import  Routes  from "express";
-import clientController from "../controllers/client.controller.js";
+import ClientController from "../controllers/client.controller.js";
 
-const routesClient = Routes();
+const RoutesClient = Routes();
 
-routesClient.route('/clients').get(clientController.getAllClients)
-routesClient.route('/clients').post(clientController.createClients)
-routesClient.route('/clients').get(clientController.getClients)
-routesClient.route('/clients/:id').delete(clientController.deleteClient)
-routesClient.route('/clients').put(clientController.updateClients)
+RoutesClient.route('/clients').get(ClientController.getAllClients)
+RoutesClient.route('/clients').post(ClientController.createClients)
+RoutesClient.route('/clients').get(ClientController.getClients)
+RoutesClient.route('/clients/:id').delete(ClientController.deleteClient)
+RoutesClient.route('/clients').put(ClientController.updateClients)
 
 
 
-export default routesClient;
+export default RoutesClient;

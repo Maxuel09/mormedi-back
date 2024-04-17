@@ -1,5 +1,5 @@
  
-import clientModel from "./src/models/client.model.js"
+import ClientModel from "./src/models/client.model.js"
 
 
 
@@ -122,7 +122,7 @@ import clientModel from "./src/models/client.model.js"
       deleteClient = async (req, res) => {
         try {
           const id = req.params.id;
-          const deleteClient = await clientModel.deleteClient(req, res);
+          const deleteClient = await ClientModel.deleteClient(req, res);
     
           res.json(deleteClient);
         } catch (error) {
@@ -135,19 +135,33 @@ import clientModel from "./src/models/client.model.js"
                 name,
                 lastname,
                 qualification,
+                department,
+                company,
+                telephone,
+                address,
+                postal_code,
+                city,
+                comments
 
             } = req.body;
             console.log(req.body);
             if (
                 !name || 
                 !lastname ||
-                !qualification 
+                !qualification||
+                !department||
+                !company||
+                !telephone||
+                !address||
+                !postal_code||
+                !city||
+                !comments
             ) {
                 return res 
                 .status(400)
                 .json({mesaje: "pleace provide all trip details"})
             }
-        await clientModel.createClient(req, res);
+        await ClientModel.createClient(req, res);
     }
     
     // export const delateClient = async (id) => {
