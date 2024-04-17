@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "firstName": "Jan",
+      "lastName": "Smit",
+      "email": "jsmit@gmail.com",
+      "password": "123456",
+      "id": "fd9b"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": "fb87"
+    },
+    {
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "qwerty",
+      "id": "5128"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Smith",
+      "email": "m.smith@example.com",
+      "password": "pass123",
+      "id": "afa0"
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "email": "emily.brown@example.com",
+      "password": "brownie",
+      "id": "bec9"
+    },
+    {
+      "firstName": "David",
+      "lastName": "Wilson",
+      "email": "david.wilson@example.com",
+      "password": "wilson123",
+      "id": "88d4"
+    },
+    {
+      "firstName": "Sarah",
+      "lastName": "Clark",
+      "email": "sarah.clark@example.com",
+      "password": "sclark",
+      "id": "04b1"
+    },
+    {
+      "firstName": "James",
+      "lastName": "Anderson",
+      "email": "james.anderson@example.com",
+      "password": "anderson789",
+      "id": "c879"
+    },
+    {
+      "firstName": "Laura",
+      "lastName": "Martinez",
+      "email": "laura.martinez@example.com",
+      "password": "laura123",
+      "id": "c331"
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Thompson",
+      "email": "daniel.thompson@example.com",
+      "password": "thompson456",
+      "id": "66fd"
+    },
+    {
+      "id": "2c04",
+      "firstName": "Wim",
+      "lastName": "de Beck",
+      "email": "wim@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "42e4",
+      "firstName": "Anne",
+      "lastName": "Stein",
+      "email": "astone@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "id": "18f9",
+      "firstName": "Paolo",
+      "lastName": "Damen",
+      "email": "paolodamen@gmail.com",
+      "password": "jkljklj"
+    },
+    {
+      "id": "e82c",
+      "email": "paolodamen@gmail.com",
+      "password": "kkkkkkkkk"
+    },
+    {
+      "id": "7dc8",
+      "email": "paolodamen@gmail.com",
+      "password": "kkkkk"
+    },
+    {
+      "id": "6a5c",
+      "email": "paolodamen@gmail.com",
+      "password": "jkljklkjkl"
+    },
+    {
+      "id": "9af3",
+      "email": "johny@gmail.com",
+      "password": "kkl;k"
+    },
+    {
+      "id": "ccaf",
+      "email": "paolodamen@gmail.com",
+      "password": "kl;lkl;k;lk"
+    }
+  ]
+}

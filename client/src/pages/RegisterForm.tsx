@@ -2,18 +2,11 @@ import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import {useNavigate } from "react-router-dom";
-import {z} from "zod"
+import {registerSchema,TRegisterSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
-const registerSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
-  email: z.string().email(),
-  password: z.string().min(5, "Must be a least 5 characters")
-})
 
-type RegisterSchema = z.infer<typeof registerSchema>
 
 const RegisterForm = () => {
 
@@ -25,12 +18,12 @@ const RegisterForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<RegisterSchema>({
+  } = useForm<TRegisterSchema>({
     resolver: zodResolver(registerSchema),
   });
 
- const onSubmit = async (data: RegisterSchema) => {
-    const response = await axios.post("MSQ_URL/register", {
+ const onSubmit = async (data: TRegisterSchema) => {
+    const response = await axios.post("http://localhost:3000/users", {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,

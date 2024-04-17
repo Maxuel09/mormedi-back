@@ -2,6 +2,9 @@ import ClientDetails from "../components/ClientDetails"
 
 
 const Clients = () => {
+
+
+  
   return (
     <div className="containerClients">
           <h1>Clients</h1>
@@ -26,3 +29,13 @@ const Clients = () => {
 }
 
 export default Clients
+
+// const BookController = {
+//   getAllBooks: async (req: Request, res: Response) => {
+//       try {
+//           const books = await BookModel.getAllBooks();
+//           res.json(books);
+//       } catch (error) {
+//           console.log(error)
+//       }
+//   },
