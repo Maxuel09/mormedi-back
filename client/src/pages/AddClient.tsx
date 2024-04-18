@@ -115,7 +115,7 @@ const addClient = () => {
             id="cellphone"
             />
              {errors.cellphone && (
-               <p className="errorDepartment">{`${errors.cellphone.message}`}</p>
+               <p className="errorCellphone">{`${errors.cellphone.message}`}</p>
               )}
 
 

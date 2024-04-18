@@ -4,17 +4,9 @@ import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import {registerSchema,TRegisterSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { useNavigate } from "react-router-dom";
 
 
-const registerSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
-  email: z.string().email(),
-  password: z.string().min(5, "Must be a least 5 characters")
-})
-
-type RegisterSchema = z.infer<typeof registerSchema>
 
 const RegisterForm = () => {
 
@@ -30,16 +22,8 @@ const RegisterForm = () => {
     resolver: zodResolver(registerSchema),
   });
 
-<<<<<<< HEAD
  const onSubmit = async (data: TRegisterSchema) => {
     const response = await axios.post("http://localhost:4000/auth/register", {
-||||||| 87fc18e
- const onSubmit = async (data: TRegisterSchema) => {
-    const response = await axios.post("http://localhost:3000/users", {
-=======
- const onSubmit = async (data: RegisterSchema) => {
-    const response = await axios.post("MSQ_URL/register", {
->>>>>>> 4d0138f62a7a4cf39fa364045ef65767cd477e29
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
