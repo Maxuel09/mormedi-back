@@ -6,4 +6,6 @@ const routesAuth = Routes();
 routesAuth.route('/login').post(authController.login)
 routesAuth.route('/register').post(authController.register)
 
+
+
 export default routesAuth;
