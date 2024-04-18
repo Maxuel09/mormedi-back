@@ -23,7 +23,7 @@ const RegisterForm = () => {
   });
 
  const onSubmit = async (data: TRegisterSchema) => {
-    const response = await axios.post("http://localhost:3000/users", {
+    const response = await axios.post("http://localhost:4000/auth/register", {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,

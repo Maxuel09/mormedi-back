@@ -115,6 +115,50 @@
       "id": "ccaf",
       "email": "paolodamen@gmail.com",
       "password": "kl;lkl;k;lk"
+    },
+    {
+      "id": "2f31",
+      "firstName": "Bert",
+      "lastName": "Last",
+      "email": "bl@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "277c",
+      "email": "bl@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "9c5a",
+      "email": "bl@gmail.com",
+      "password": "123sssssss"
+    },
+    {
+      "id": "11de",
+      "email": "bl@gmail.com",
+      "password": "jklkjlkj"
+    },
+    {
+      "id": "49b0",
+      "firstName": "Paolo",
+      "lastName": "Smti",
+      "email": "johny@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2472",
+      "email": "johny@gmail.com",
+      "password": "jkljkljlkj"
+    },
+    {
+      "id": "5dfc",
+      "email": "wim@gmail.com",
+      "password": "jkljkljkj"
+    },
+    {
+      "id": "09cf",
+      "email": "paulus@gmail.com",
+      "password": "1984"
     }
   ]
 }

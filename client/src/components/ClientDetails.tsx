@@ -1,4 +1,5 @@
 import PencilIcon from "../assets/pencil.svg"
+import {Link} from "react-router-dom"
 
 
 
@@ -12,7 +13,9 @@ const ClientDetails = () => {
         <li className="underline">Sector</li>
         <li className="underline">State</li>
         <li className="underline">Commercial</li>
-        <li><img src={PencilIcon} alt="pencilLogo" /></li>
+        <Link to={"/addClient"}>
+          <li><img src={PencilIcon} alt="pencilLogo" /></li>
+        </Link>
       </ul>
     </div>
   )

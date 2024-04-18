@@ -26,7 +26,7 @@ const LoginForm = () => {
       email: data.email,
       password: data.password,
     });
-    console.log(response);
+    console.log(response.data);
     navigate("/clients")
     reset();
   };
