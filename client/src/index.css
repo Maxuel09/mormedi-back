@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "Sailec-Light";
-  src: url("./fonts/Sailec/Sailec-Light.otf") format("truetype");
-  /* Add additional src declarations for other font formats if needed */
-}
+
 
 * {
   margin: 0;
@@ -247,7 +243,7 @@ input:hover {
 
 .error {
   color: red;
-  margin-top: 25px;
+  margin-top: -25px;
   padding: 5px;
 }
 
@@ -354,6 +350,7 @@ input:hover {
 }
 .clientList img {
   color: #1d1b4c;
+<<<<<<< HEAD
 }
 
 
@@ -389,3 +386,8 @@ input:hover {
   background-color: #474780;
 }
 
+||||||| 87fc18e
+}
+=======
+} 
+>>>>>>> 4d0138f62a7a4cf39fa364045ef65767cd477e29
