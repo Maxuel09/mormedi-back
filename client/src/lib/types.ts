@@ -15,3 +15,19 @@ export const loginSchema = z.object({
   })
   
 export type TLoginSchema = z.infer<typeof loginSchema>
+
+export const addSchema = z.object({
+  firstName: z.string(),
+  lastName: z.string(),
+  title: z.string(),
+  department: z.string(),
+  email: z.string(),
+  cellphone: z.number(),
+  company: z.string(),
+  sector: z.string(),
+  subsector: z.string(),
+  password: z.string()
+
+})
+
+export type TaddSchema = z.infer<typeof addSchema>

@@ -175,7 +175,7 @@ input:hover {
   background-color: #fff;
   width: 500px;
   height: 550px;
-  margin: 150px auto 0;
+  margin: 250px auto 0;
   display: flex;
   border: 1px solid black;
   justify-content: space-around;
@@ -198,6 +198,9 @@ input:hover {
   border-bottom: 1px solid black;
   background-color: #fff;
   margin: 0 auto -5px;
+}
+.container-input {
+  margin-top: 100px;;
 }
 
 .container-login button {
@@ -226,10 +229,11 @@ input:hover {
   top: -20px;
   left: 115px;
 }
-.container-login .top {
+.container-login .line {
   text-align: center;
-  margin-top: -40px;
-  margin-bottom: 50px;
+  position: absolute;
+  top: 110px;
+  left: 160px;
   font-family: "Sailec-Light";
   font-size: 14px;
 }
@@ -243,7 +247,7 @@ input:hover {
 
 .error {
   color: red;
-  margin-top: -25px;
+  margin-top: 10px;
   padding: 5px;
 }
 
@@ -300,10 +304,11 @@ input:hover {
   top: -20px;
   left: 115px;
 }
-.container-register .top {
+.container-register .line {
   text-align: center;
-  margin-top: 75px;
-  margin-bottom: 50px;
+  position: absolute;
+  top: 110px;
+  left: 155px;
   font-family: "Sailec-Light";
   font-size: 14px;
 }
@@ -317,6 +322,9 @@ input:hover {
 
 .container-register .bottom:hover {
   color: #9e9ea7;
+}
+.lower {
+  padding-top: 110px;
 }
 
 /* CLIENTS */
@@ -350,7 +358,6 @@ input:hover {
 }
 .clientList img {
   color: #1d1b4c;
-<<<<<<< HEAD
 }
 
 
@@ -386,8 +393,3 @@ input:hover {
   background-color: #474780;
 }
 
-||||||| 87fc18e
-}
-=======
-} 
->>>>>>> 4d0138f62a7a4cf39fa364045ef65767cd477e29

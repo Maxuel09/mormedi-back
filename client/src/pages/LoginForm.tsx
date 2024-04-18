@@ -35,38 +35,40 @@ const LoginForm = () => {
     <div className="container-login">
       <form onSubmit={handleSubmit(onSubmit)}>
         <img src={Logo} alt="logo mormedi" className="logo"/>
-        <p className="top">making tomorrow more tangibles</p> 
-          <label htmlFor="email">Email</label>
-          <input 
-          {
-           ...register("email" 
+        <p className="line">making tomorrow more tangible</p> 
+        <div className="container-input">      
+            <label htmlFor="email">Email</label>
+            <input 
+            {
+            ...register("email" 
+              )}
+            type="email"  
+            id="email" 
+            />
+            {errors.email && (
+              <p className="error">{`${errors.email.message}`}</p>
             )}
-          type="email"  
-          id="email" 
-          />
-          {errors.email && (
-            <p className="error">{`${errors.email.message}`}</p>
-          )}
-          <label htmlFor="password">Password</label>
-          <input
-          {
-            ...register("password"
-          )}
-          type="password" 
-          id="password"
-          />
-           {errors.password && (
-            <p className="error">{`${errors.password.message}`}</p>
-          )}
-         <button 
-         type="submit"
-         disabled={isSubmitting}
-         >
-          Login
-          </button>
-          <Link to={"/register"}className="bottom">
-              <p >you have not registered?</p> 
-          </Link>
+            <label htmlFor="password">Password</label>
+            <input
+            {
+              ...register("password"
+            )}
+            type="password" 
+            id="password"
+            />
+            {errors.password && (
+              <p className="error">{`${errors.password.message}`}</p>
+            )}
+          <button 
+          type="submit"
+          disabled={isSubmitting}
+          >
+            Login
+            </button>
+            <Link to={"/register"}className="bottom">
+                <p >you have not registered?</p> 
+            </Link>
+          </div>
       </form>
       <DevTool control={control} />
     </div>

@@ -1,26 +1,13 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import {z} from "zod"
+import { addSchema, TaddSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-const addSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
-  title: z.string(),
-  department: z.string(),
-  email: z.string(),
-  cellphone: z.number(),
-  company: z.string(),
-  sector: z.string(),
-  subsector: z.string(),
-  password: z.string()
 
-})
 
-type TaddSchema = z.infer<typeof addSchema>
-
-const addClient = () => {
+const AddClient = () => {
+  
   const {
     control,
     register,
@@ -30,6 +17,8 @@ const addClient = () => {
   } = useForm<TaddSchema>({
     resolver: zodResolver(addSchema),
   });
+
+  
  
   const onSubmit = async (data:TaddSchema ) => {
     const response = await axios.post("https://your-api-endpoint.com/login", {
@@ -120,7 +109,7 @@ const addClient = () => {
 
 
 
-         <button >
+         <button type="submit"  disabled={isSubmitting}>
           Save
           </button>
           <button>
@@ -133,4 +122,4 @@ const addClient = () => {
   );
 };
 
-export default addClient
+export default AddClient

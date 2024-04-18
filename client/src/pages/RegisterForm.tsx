@@ -38,7 +38,8 @@ const RegisterForm = () => {
     <div className="container-register">
       <form onSubmit={handleSubmit(onSubmit)}>
         <img src={Logo} alt="logo mormedi" className="logo"/>
-        <p className="top">making tomorrow more tangible</p> 
+        <p className="line">making tomorrow more tangible</p> 
+        <div className="lower">
           <label htmlFor="firstName">First name</label>
           <input 
           {
@@ -88,6 +89,7 @@ const RegisterForm = () => {
          disabled={isSubmitting}>
           Register
          </button>
+         </div>
       </form>
       <DevTool control={control} />
     </div>
