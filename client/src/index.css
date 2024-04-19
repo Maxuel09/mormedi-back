@@ -15,7 +15,7 @@ body {
   display: flex;
   font-family: "Sailec-Light";
   font-size: 16px;
-  max-width: 1440px;
+  max-width: 100%;
   min-height: 1024px;
   margin: 0 auto;
   background-color: #e5e5e5;

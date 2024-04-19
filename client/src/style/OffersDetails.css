@@ -1,0 +1,31 @@
+.containerOffers {
+    width: 1000px;
+    height: 560px;
+    background-color: rgb(242, 242, 242);
+    position: absolute;
+    top: 230px;
+    left: 300px;
+}
+
+.containerOffers h1 {
+    padding: 1.5rem;
+}
+
+/* CLIENTDETIALS */
+
+.OffersList {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+
+.OffersList .underline {
+    border-bottom: 1px solid black;
+    width: 14%;
+}
+
+.OffersList img {
+    color: #1d1b4c;
+}

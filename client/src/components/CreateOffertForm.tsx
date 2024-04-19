@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const AddOffer: React.FC = () => {
+const CreateOfferForm: React.FC = () => {
     const [offerData, setOfferData] = useState({
         code: '',
         expected_date: '',
@@ -85,6 +85,4 @@ const AddOffer: React.FC = () => {
     );
 };
 
-
-
-export default AddOffer
+export default CreateOfferForm;

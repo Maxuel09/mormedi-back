@@ -1,6 +1,7 @@
 import Logo from '../assets/logo.svg'
 import {Link} from "react-router-dom"
 
+
 const Sidebar = () => {
   return (
     <div className='menu'>
@@ -14,7 +15,7 @@ const Sidebar = () => {
           <Link to={"/clients"} className='item'>
           Clients
           </Link>
-          <Link to={""} className='item'>
+          <Link to={"/Offers"} className='item'>
           Offers
           </Link>
           <Link to={""} className='item'>
