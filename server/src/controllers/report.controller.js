@@ -7,7 +7,7 @@ import ReportModel from "./src/models/report.model.js"
 deleteReport = async (req, res) => {
   try {
     const id = req.params.id;
-    const deleteClient = await ReportModel.deleteReport(req, res);
+    const deleteReport = await ReportModel.deleteReport(req, res);
 
     res.json(deleteReport);
   } catch (error) {

@@ -3,11 +3,11 @@ import ReportController from "../controllers/report.controller.js";
 
 const RoutesReport = Routes();
 
-RoutesReport.route('/offerts').get(ReportController.getAllReports)
-RoutesReport.route('/offerts').post(ReportController.createReports)
-RoutesReport.route('/offerts').get(ReportController.getReportrs)
-RoutesReport.route('/offerts/:id').delete(ReportController.deleteReport)
-RoutesReport.route('/offerts').put(ReportController.updateReports)
+RoutesReport.route('/reports').get(ReportController.getAllReports)
+RoutesReport.route('/reports').post(ReportController.createReports)
+RoutesReport.route('/reports').get(ReportController.getReportrs)
+RoutesReport.route('/reports/:id').delete(ReportController.deleteReport)
+RoutesReport.route('/reports').put(ReportController.updateReports)
 
 
 

@@ -4,10 +4,10 @@ import OffertModel from "./src/models/offert.model.js"
 
 
 
-      deleteOffert = async (req, res) => {
+    deleteOffert = async (req, res) => {
         try {
           const id = req.params.id;
-          const deleteClient = await OffertModel.deleteOffert(req, res);
+          const deleteOffert = await OffertModel.deleteOffert(req, res);
     
           res.json(deleteOffert);
         } catch (error) {

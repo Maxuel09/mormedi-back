@@ -7,7 +7,7 @@ import UserModel from "./src/models/user.model.js"
 deleteUser = async (req, res) => {
   try {
     const id = req.params.id;
-    const deleteClient = await UserModel.deleteUser(req, res);
+    const deleteUser = await UserModel.deleteUser(req, res);
 
     res.json(deleteUser);
   } catch (error) {
