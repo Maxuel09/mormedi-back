@@ -1,10 +1,10 @@
 import { Router } from "express";
-import clientController from "../controllers/client.controller.js";
+import ClientController from "../controllers/client.controller.js";
 
-const routesClients = Router();
+const RoutesClients = Router();
 
-routesClients.route("/clients")
-    .get(clientController.getAllClients)
-    .post(clientController.createClient)
+RoutesClients.route("/clients")
+    .get(ClientController.getAllClients)
+    .post(ClientController.createClient)
     
-export default routesClients
+export default RoutesClients

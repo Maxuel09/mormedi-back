@@ -1,10 +1,10 @@
-import clientModel from "../model/client.model.js";
+import ClientModel from "../model/client.model.js";
 
-const clientController = {
+const ClientController = {
 
     getAllClients: async (req, res) => {
         try {
-            const clients = await clientModel.getAllClients();
+            const clients = await ClientModel.getAllClients();
             res.json(clients);
             
         }catch(error) {
@@ -14,7 +14,7 @@ const clientController = {
 
     createClient: async (req, res) => {
         try {
-            const newClient = await clientModel.createClient(req.body);
+            const newClient = await ClientModel.createClient(req.body);
             res.json(newClient);
             
         }catch(error) {
@@ -23,4 +23,4 @@ const clientController = {
     }
 }
 
-export default clientController
+export default ClientController

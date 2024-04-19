@@ -4,7 +4,7 @@ import { createToken } from "../helpers/jwt.js"
 
 const prisma = new PrismaClient()
 
-const authController = {
+const AuthController = {
     login: async (req, res) => {
         try {
             const { email, password } = req.body
@@ -63,4 +63,4 @@ const authController = {
     }
 }
 
-export default authController
+export default AuthController

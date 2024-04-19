@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
-import routesAuth from './routes/auth.routes.js';
+import RoutesAuth from './routes/auth.routes.js';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 dotenv.config();
-
-import routesClients from './routes/client.routes.js';
+import RoutesClients from './routes/client.routes.js';
+import RoutesOffert from './routes/offert.routes.js';
+import RoutesUser from './routes/user.routes.js';
+import RoutesTeam from './routes/team.routes.js';
+import RoutesSuper_Admin from './routes/super_admin.routes.js';
 
 const app = express();
 const port = process.env.PORT ?? 4110;
@@ -16,8 +19,12 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
 // Routes
-app.use("/auth", routesAuth)
-app.use("/mormedi", routesClients)
+app.use("/auth", RoutesAuth)
+app.use("/client", RoutesClients)
+app.use("/offert", RoutesOffert)
+app.use("/user", RoutesUser)
+app.use("/team", RoutesTeam)
+app.use("/super_admin", RoutesSuper_Admin)
 
 app.get('/', (req, res) => {
     res.send('Hello World!');

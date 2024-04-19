@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const clientModel = {
+const ClientModel = {
 
     getAllClients: async () => {
         try {
@@ -26,4 +26,4 @@ const clientModel = {
     }
 }
 
-export default clientModel;
+export default ClientModel;
