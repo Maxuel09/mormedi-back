@@ -3,11 +3,11 @@ import UserController from "../controllers/user.controller.js";
 
 const RoutesUser = Routes();
 
-RoutesUser.route('/offerts').get(UserController.getAllUsers)
-RoutesUser.route('/offerts').post(UserController.createUsers)
-RoutesUser.route('/offerts').get(UserController.getUsers)
-RoutesUser.route('/offerts/:id').delete(UserController.deleteUser)
-RoutesUser.route('/offerts').put(UserController.updateUsers)
+RoutesUser.route('/users').get(UserController.getAllUsers)
+RoutesUser.route('/users').post(UserController.createUsers)
+RoutesUser.route('/users').get(UserController.getUsers)
+RoutesUser.route('/users/:id').delete(UserController.deleteUser)
+RoutesUser.route('/users').put(UserController.updateUsers)
 
 
 
