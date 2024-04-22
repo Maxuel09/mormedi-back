@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Clients from '../pages/Clients';
+import Clients from '../pages/Clients'
+import Dashboard from '../pages/Dashboard';
 import AddClient from "../pages/AddClient"
 import Root from './Root';
 import LoginForm from "../pages/LoginForm"
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
+                element: <Dashboard/>
+            },
+            {
+                path: "/clients",
                 element: <Clients />
             },
             {

@@ -8,8 +8,8 @@ const Sidebar = () => {
         <img src={Logo} alt="logo Mormedi" />
       </div>
       <div className="menu--list">
-          <Link to={""} className='item'>
-          Home
+          <Link to={"/"} className='item'>
+          Dashboard
           </Link>
           <Link to={"/clients"} className='item'>
           Clients

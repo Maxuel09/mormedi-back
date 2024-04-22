@@ -1,41 +1,75 @@
 import ClientDetails from "../components/ClientDetails"
+import { useState, useEffect } from 'react';
 
 
-const Clients = () => {
 
-
-  
-  return (
-    <div className="containerClients">
-          <h1>Clients</h1>
-          <div className="header--activity">
-                <div className="search-box">
-                <svg className="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                <input placeholder="Search" type="search" className="input"/>
-                </div>
-            </div>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-            <ClientDetails/>
-    </div>
-  )
+type Client =
+{
+  id: number,
+  firstName: string,
+  lastName: string
+  qualification: string,
+  department: string,
+  company: string
 }
 
-export default Clients
+function Clients() {
+    // State to store the list of clients
+    const [clients, setClients] = useState([]);
 
-// const BookController = {
-//   getAllBooks: async (req: Request, res: Response) => {
-//       try {
-//           const books = await BookModel.getAllBooks();
-//           res.json(books);
-//       } catch (error) {
-//           console.log(error)
-//       }
-//   },
+    
+    
+    // Fetch clients from the API endpoint when the component mounts
+    useEffect(() => {
+        // Define the API endpoint URL
+        const apiUrl = 'http://localhost:3000/clients';
+
+        // Function to fetch data from the API endpoint
+        const fetchClients = async () => {
+            try {
+                // Make a GET request to the API endpoint
+                const response = await fetch(apiUrl);
+
+                // Check if the response is successful
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                // Parse the JSON data
+                const data = await response.json();
+
+                // Update the state with the fetched data
+                setClients(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        // Call the function to fetch clients
+        fetchClients();
+    }, []);
+
+    return (
+        <div className="containerClients">
+            <h1>Client List</h1>
+            {/* Check if there are clients to display */}
+            {clients.length > 0 ? (
+                <ul>
+                    {/* Map through the list of clients and display them */}
+                    {clients.map((client: Client) => (
+                        <li key={client.id}>
+                            {/* Customize the display of each client as needed */}
+                            {client.firstName} -  {client.lastName} - {client.qualification} - {client.department} - {client.company}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No clients found.</p>
+            )}
+        </div>
+    );
+}
+
+export default Clients;
+
+
