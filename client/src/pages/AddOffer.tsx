@@ -207,21 +207,3 @@ const AddOffer = () => {
 export default AddOffer
 
 
-// clients       clients        @relation(name: "clientsTooffers", fields: [clientId], references: [id])
-// clientId      Int
-// id            Int            @id @default(autoincrement())
-// code          Int
-// expected_date DateTime       @db.Date
-// place         String         @db.VarChar(30)
-// importance    Int
-// comments      String         @db.Text
-// title         String         @db.VarChar(30)
-// subsidiaries  subsidiaries[] @relation(name: "offersTosubsidiaries")
-// commercials   commercials[]  @relation(name: "commercialsTooffers")
-// offerings     offerings[]    @relation(name: "offeringsTooffers")
-// origins       origins[]      @relation(name: "offersToorigins")
-// states        states[]       @relation(name: "offersTostates")
-// types         types[]        @relation(name: "offersTotypes")
-// odds          odds[]         @relation(name: "oddsTooffers")
-// values        values[]       @relation(name: "offersTovalues")
-whom   

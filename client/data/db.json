@@ -1,85 +1,265 @@
 {
-    "clients": [
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "Jan",
+      "lastName": "Smit",
+      "qualification": "head of engineering",
+      "department": "engineering",
+      "company": "Red Star"
+    },
+    {
+      "id": 2,
+      "firstName": "John",
+      "lastName": "Doe",
+      "qualification": "sales director",
+      "department": "sales",
+      "company": "Blue Ring"
+    },
+    {
+      "id": 3,
+      "firstName": "Emily",
+      "lastName": "Taylor",
+      "qualification": "marketing manager",
+      "department": "marketing",
+      "company": "Green Globe"
+    },
+    {
+      "id": 4,
+      "firstName": "Mark",
+      "lastName": "Johnson",
+      "qualification": "IT specialist",
+      "department": "IT",
+      "company": "Tech Wave"
+    },
+    {
+      "id": 5,
+      "firstName": "Sophia",
+      "lastName": "Miller",
+      "qualification": "product designer",
+      "department": "design",
+      "company": "Innovate Inc."
+    },
+    {
+      "id": 6,
+      "firstName": "David",
+      "lastName": "Lee",
+      "qualification": "financial analyst",
+      "department": "finance",
+      "company": "Finance Corp."
+    },
+    {
+      "id": 7,
+      "firstName": "Olivia",
+      "lastName": "Brown",
+      "qualification": "HR manager",
+      "department": "HR",
+      "company": "Blue Sky"
+    },
+    {
+      "id": 8,
+      "firstName": "James",
+      "lastName": "Wilson",
+      "qualification": "project manager",
+      "department": "project management",
+      "company": "Project Masters"
+    },
+    {
+      "id": 9,
+      "firstName": "Ava",
+      "lastName": "White",
+      "qualification": "legal advisor",
+      "department": "legal",
+      "company": "Law & Order"
+    },
+    {
+      "id": 10,
+      "firstName": "Michael",
+      "lastName": "Harris",
+      "qualification": "research scientist",
+      "department": "research",
+      "company": "Research Solutions"
+    }
+  ],
+
+  "offers": [
       {
-        "Name": "Jan Jansen",
-        "Company": "Shell",
-        "Amount": 30,
-        "Sector": "Chemical",
-        "State": "USE",
-        "Commercial": "Eric Smit"
+          "title": "Project X",
+          "amount": 40,
+          "probability": "high",
+          "state": "Spain",
+          "subsidairy": "Madrid"
       },
       {
-        "Name": "Alice Smith",
-        "Company": "Tesla",
-        "Amount": 25,
-        "Sector": "Automotive",
-        "State": "USA",
-        "Commercial": "John Doe"
+          "title": "New Design",
+          "amount": 50,
+          "probability": "medium",
+          "state": "France",
+          "subsidairy": "Paris"
       },
       {
-        "Name": "Mohammed Khan",
-        "Company": "ExxonMobil",
-        "Amount": 40,
-        "Sector": "Energy",
-        "State": "UAE",
-        "Commercial": "Emily Jones"
+          "amount": 60,
+          "probability": "low",
+          "state": "Germany",
+          "subsidairy": "Berlin"
       },
       {
-        "Name": "Emma Johnson",
-        "Company": "Google",
-        "Amount": 20,
-        "Sector": "Technology",
-        "State": "USA",
-        "Commercial": "David Brown"
+          "amount": 45,
+          "probability": "high",
+          "state": "Italy",
+          "subsidairy": "Rome"
       },
       {
-        "Name": "Hans Müller",
-        "Company": "BMW",
-        "Amount": 35,
-        "Sector": "Automotive",
-        "State": "GER",
-        "Commercial": "Anna Schmidt"
+          "amount": 55,
+          "probability": "medium",
+          "state": "Netherlands",
+          "subsidairy": "Amsterdam"
       },
       {
-        "Name": "Sophie Dupont",
-        "Company": "L'Oréal",
-        "Amount": 28,
-        "Sector": "Cosmetics",
-        "State": "FRA",
-        "Commercial": "Thomas Leclerc"
+          "amount": 70,
+          "probability": "low",
+          "state": "United Kingdom",
+          "subsidairy": "London"
       },
       {
-        "Name": "Chen Wei",
-        "Company": "Alibaba",
-        "Amount": 32,
-        "Sector": "E-commerce",
-        "State": "CHN",
-        "Commercial": "Li Wei"
+          "amount": 35,
+          "probability": "high",
+          "state": "Portugal",
+          "subsidairy": "Lisbon"
       },
       {
-        "Name": "Ravi Patel",
-        "Company": "Infosys",
-        "Amount": 22,
-        "Sector": "IT Services",
-        "State": "IND",
-        "Commercial": "Priya Sharma"
+          "amount": 65,
+          "probability": "medium",
+          "state": "Switzerland",
+          "subsidairy": "Zurich"
       },
       {
-        "Name": "Maria Garcia",
-        "Company": "Iberdrola",
-        "Amount": 38,
-        "Sector": "Utilities",
-        "State": "ESP",
-        "Commercial": "Carlos Rodriguez"
+          "amount": 75,
+          "probability": "low",
+          "state": "Austria",
+          "subsidairy": "Vienna"
       },
       {
-        "Name": "Yuki Tanaka",
-        "Company": "Toyota",
-        "Amount": 27,
-        "Sector": "Automotive",
-        "State": "JPN",
-        "Commercial": "Satoshi Yamamoto"
+          "amount": 50,
+          "probability": "high",
+          "state": "Belgium",
+          "subsidairy": "Brussels"
       }
-    ]
-  }
+  ],
   
+  "users": [
+    {
+      "firstName": "Jan",
+      "lastName": "Smit",
+      "email": "jsmit@gmail.com",
+      "password": "123456",
+      "id": "fd9b",
+      "role": "admin"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": "fb87",
+      "role": "user"
+    },
+    {
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "qwerty",
+      "id": "5128",
+      "role": "user"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Smith",
+      "email": "m.smith@example.com",
+      "password": "pass123",
+      "id": "afa0",
+      "role": "user"
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "email": "emily.brown@example.com",
+      "password": "brownie",
+      "id": "bec9",
+      "role": "user"
+    },
+    {
+      "firstName": "David",
+      "lastName": "Wilson",
+      "email": "david.wilson@example.com",
+      "password": "wilson123",
+      "id": "88d4",
+      "role": "user"
+    },
+    {
+      "firstName": "Sarah",
+      "lastName": "Clark",
+      "email": "sarah.clark@example.com",
+      "password": "sclark",
+      "id": "04b1",
+      "role": "admin"
+    },
+    {
+      "firstName": "James",
+      "lastName": "Anderson",
+      "email": "james.anderson@example.com",
+      "password": "anderson789",
+      "id": "c879",
+      "role": "user"
+    },
+    {
+      "firstName": "Laura",
+      "lastName": "Martinez",
+      "email": "laura.martinez@example.com",
+      "password": "laura123",
+      "id": "c331",
+      "role": "user"
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Thompson",
+      "email": "daniel.thompson@example.com",
+      "password": "thompson456",
+      "id": "66fd",
+      "role": "user"
+    },
+    {
+      "id": "2c04",
+      "firstName": "Wim",
+      "lastName": "de Beck",
+      "email": "wim@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "42e4",
+      "firstName": "Anne",
+      "lastName": "Stein",
+      "email": "astone@gmail.com",
+      "password": "1234567",
+      "role": "user"
+    },
+    {
+      "id": "18f9",
+      "firstName": "Paolo",
+      "lastName": "Damen",
+      "email": "paolodamen@gmail.com",
+      "password": "jkljklj",
+      "role": "user"
+    },
+    {
+      "id": "2f31",
+      "firstName": "Bert",
+      "lastName": "Last",
+      "email": "bl@gmail.com",
+      "password": "123456",
+      "role": "user"
+    }  
+  ]
+}
+
