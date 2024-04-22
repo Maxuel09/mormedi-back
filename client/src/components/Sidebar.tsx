@@ -14,7 +14,7 @@ const Sidebar = () => {
           <Link to={"/clients"} className='item'>
           Clients
           </Link>
-          <Link to={""} className='item'>
+          <Link to={"/offers"} className='item'>
           Offers
           </Link>
           <Link to={""} className='item'>

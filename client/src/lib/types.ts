@@ -16,18 +16,40 @@ export const loginSchema = z.object({
   
 export type TLoginSchema = z.infer<typeof loginSchema>
 
-export const addSchema = z.object({
+export const addClientSchema = z.object({
   firstName: z.string(),
   lastName: z.string(),
   title: z.string(),
   department: z.string(),
   email: z.string(),
   cellphone: z.number(),
+  comments: z.string(),
   company: z.string(),
   sector: z.string(),
   subsector: z.string(),
-  password: z.string()
-
+  address: z.string(),
+  country: z.string(),
+  city: z.string(),
+  postalCode: z.string()
 })
 
-export type TaddSchema = z.infer<typeof addSchema>
+export type TaddClientSchema = z.infer<typeof addClientSchema>
+
+export const addOfferSchema = z.object({
+  firstName: z.string(),
+  lastName: z.string(),
+  title: z.string(),
+  department: z.string(),
+  email: z.string(),
+  cellphone: z.number(),
+  comments: z.string(),
+  company: z.string(),
+  sector: z.string(),
+  subsector: z.string(),
+  address: z.string(),
+  country: z.string(),
+  city: z.string(),
+  postalCode: z.string()
+})
+
+export type TaddOfferSchema = z.infer<typeof addOfferSchema>

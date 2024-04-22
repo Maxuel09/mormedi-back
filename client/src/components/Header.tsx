@@ -1,43 +1,7 @@
-import { useState, useEffect } from "react"
-
-
 const Header = () => {
-    const [firstName, setFirstName] = useState("Peter");
    
-    const [role, setRole] = useState("user");
-   
-
-
-    useEffect(() => {
-        // Define the API endpoint URL
-        const apiUrl = 'http://localhost:3000/users';
-
-        // Function to fetch data from the API endpoint
-        const fetchUsers = async () => {
-            try {
-                // Make a GET request to the API endpoint
-                const response = await fetch(apiUrl);
-
-                // Check if the response is successful
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                // Parse the JSON data
-                const data = await response.json();
-
-                // Update the state with the fetched data
-                setFirstName(data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        // Call the function to fetch clients
-       fetchUsers();
-    
-
-    }, []);
+    const firstName = "Richard"
+    const role = "admin"
 
     const today = new Date(); 
 

@@ -1,7 +1,6 @@
-import ClientDetails from "../components/ClientDetails"
 import { useState, useEffect } from 'react';
-
-
+import {Link} from "react-router-dom"
+import PencilIcon from "../assets/pencil.svg"
 
 type Client =
 {
@@ -46,10 +45,19 @@ function Clients() {
         <div className="containerClients">
             <h1>Clients</h1>
             {clients.length > 0 ? (
-                <ul>
+                <ul className="clientList">
                     {clients.map((client: Client) => (
-                        <li key={client.id}>
-                            {client.firstName} -  {client.lastName} - {client.qualification} - {client.department} - {client.company}
+                        <li key={client.id} className="listStyle">                      
+                            <li className="underline"> {client.company}</li>                        
+                            <li className="underline"> {client.firstName}</li>
+                            <li className="underline">{client.lastName}</li>
+                            <li className="underline">{client.qualification}</li>
+                            <li className="underline">{client.department}</li>
+                            <li className="underline">State</li>
+                            <li className="underline">Commercial</li>
+                            <Link to={"/addClient"}>
+                                <li><img src={PencilIcon} alt="pencilLogo" /></li>
+                            </Link>             
                         </li>
                     ))}
                 </ul>

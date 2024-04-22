@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import axios from "axios";
-import { addSchema, TaddSchema } from "../lib/types";
+import { addClientSchema, TaddClientSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 
@@ -14,14 +14,14 @@ const AddClient = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<TaddSchema>({
-    resolver: zodResolver(addSchema),
+  } = useForm<TaddClientSchema>({
+    resolver: zodResolver(addClientSchema),
   });
 
   
  
-  const onSubmit = async (data:TaddSchema ) => {
-    const response = await axios.post("https://your-api-endpoint.com/login", {
+  const onSubmit = async (data:TaddClientSchema ) => {
+    const response = await axios.post("http://localhost:3000/clients'", {
       firstName: data.firstName,
       lastName: data.lastName,
       title: data.title,
@@ -31,6 +31,10 @@ const AddClient = () => {
       company: data.company,
       sector: data.sector,
       subsector: data.subsector,
+      address: data.address,
+      country: data.country,
+      city: data.city,
+      postalCode: data.postalCode
     });
     console.log(response);
     reset();
@@ -106,8 +110,83 @@ const AddClient = () => {
              {errors.cellphone && (
                <p className="errorCellphone">{`${errors.cellphone.message}`}</p>
               )}
-
-
+            <label htmlFor="comments">Comments</label>
+            <input
+            {
+              ...register("comments"
+            )}
+            type="text" 
+            id="comments"
+            />
+             {errors.comments && (
+               <p className="errorComments">{`${errors.comments.message}`}</p>
+              )}
+            <label htmlFor="company">Company</label>
+            <input
+            {
+              ...register("company"
+            )}
+            type="text" 
+            id="company"
+            />
+             {errors.company && (
+               <p className="errorCompany">{`${errors.company.message}`}</p>
+              )}
+            <label htmlFor="sector">Sector</label>
+            <input
+            {
+              ...register("sector"
+            )}
+            type="text" 
+            id="sector"
+            />
+             {errors.sector && (
+               <p className="errorSubSector">{`${errors.sector.message}`}</p>
+              )}
+            <label htmlFor="subSector">Sub Sector</label>
+            <input
+            {
+              ...register("subsector"
+            )}
+            type="text" 
+            id="subsector"
+            />
+             {errors.subsector && (
+               <p className="errorSubSector">{`${errors.subsector.message}`}</p>
+              )}
+            <label htmlFor="address">Sub Sector</label>
+            <input
+            {
+              ...register("address"
+            )}
+            type="text" 
+            id="address"
+            />
+             {errors.address && (
+               <p className="erroraddres">{`${errors.address.message}`}</p>
+              )}
+            <label htmlFor="country">Country</label>
+            <input
+            {
+              ...register("country"
+            )}
+            type="text" 
+            id="country"
+            />
+             {errors.country && (
+               <p className="errorcountry">{`${errors.country.message}`}</p>
+              )}
+            <label htmlFor="country">City</label>
+            <input
+            {
+              ...register("city"
+            )}
+            type="text" 
+            id="city"
+            />
+             {errors.city && (
+               <p className="errorcity">{`${errors.city.message}`}</p>
+              )}
 
          <button type="submit"  disabled={isSubmitting}>
           Save

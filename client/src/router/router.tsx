@@ -1,7 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Clients from '../pages/Clients'
+import Offers from '../pages/Offers';
 import Dashboard from '../pages/Dashboard';
-import AddClient from "../pages/AddClient"
+import AddClient from "../pages/AddClient";
+import AddOffer from "../pages/AddOffer"
 import Root from './Root';
 import LoginForm from "../pages/LoginForm"
 import RegisterForm from "../pages/RegisterForm"
@@ -22,9 +24,17 @@ const router = createBrowserRouter([
                 element: <Clients />
             },
             {
+                path: "/offers",
+                element: <Offers/>
+            },
+            {
                 path: "/addClient",
                 element: <AddClient />
             },
+            {
+                path: "/addOffer",
+                element: <AddOffer/>
+            }
         ],
     },
     {

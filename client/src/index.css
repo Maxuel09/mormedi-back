@@ -1,16 +1,14 @@
 @font-face {
-  font-family: 'Sailes';
-  src: url('./font/Sailec-Light.otf') format('woff2'),
-       url('./font/Sailec-Medium.otf') format('woff'),
-       ;
+  font-family: "Sailes";
+  src: url("./font/Sailec-Light.otf") format("woff2"),
+    url("./font/Sailec-Medium.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Gill Sans', sans-serif;
+  font-family: "Gill Sans", sans-serif;
 }
-
 
 * {
   margin: 0;
@@ -85,18 +83,18 @@ body {
   padding: 30px;
   margin-right: 30px;
 }
-.header h5 { 
- padding: 40px;
- margin-right: 30px;
- font-size: 18px;
- font-weight: 400;
+.header h5 {
+  padding: 40px;
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: 400;
 }
 .sub-header {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  margin-top:  50px;
+  margin-top: 50px;
 }
 
 .sub-header h3 {
@@ -116,9 +114,8 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 50px;
-  right: 100px;
+  right: 150px;
 }
-
 
 /* ///////////////////// */
 
@@ -208,7 +205,7 @@ input:hover {
   margin: 0 auto -5px;
 }
 .container-input {
-  margin-top: 100px;;
+  margin-top: 100px;
 }
 
 .container-login button {
@@ -337,7 +334,8 @@ input:hover {
 
 /* CLIENTS */
 
-.containerClients, .containerDashboard {
+.containerClients,
+.containerDashboard {
   width: 1000px;
   height: 560px;
   background-color: rgb(242, 242, 242);
@@ -346,8 +344,15 @@ input:hover {
   left: 300px;
 }
 
+.clientsList {
+  list-style: none;
+}
+
 .containerClients h1 {
   padding: 1.5rem;
+}
+.listStyle {
+  display: flex;
 }
 
 /* CLIENTDETIALS */
@@ -355,19 +360,22 @@ input:hover {
 .clientList {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   padding: 10px 20px;
   margin-top: 5px;
+  font-size: 12px;
 }
 
 .clientList .underline {
   border-bottom: 1px solid black;
   width: 14%;
+  margin-right: 15px;
 }
 .clientList img {
   color: #1d1b4c;
+  margin-top: 5px;
 }
-
 
 /* ADD CLIENT */
 
@@ -400,4 +408,3 @@ input:hover {
 .container-addClient button:hover {
   background-color: #474780;
 }
-
