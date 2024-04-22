@@ -3,6 +3,7 @@ import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { addOfferSchema, TaddOfferSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import {Link} from "react-router-dom"
 
 
 
@@ -37,15 +38,16 @@ const AddOffer = () => {
       prospectiveDate: data.prospectiveDate,
       probability: data.probability,
       comments: data.comments,
-      responsable: data.resonsable
+      responsable: data.responsable
     });
     console.log(response);
     reset();
   };
   
   return (
-    <div className="temp">
-    <div className="container-addClient">
+    <div>
+    <div className="containerMain">
+      <h1>Add</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="code">code</label>
           <input
@@ -55,86 +57,53 @@ const AddOffer = () => {
           type="text" 
           id="code"
           />
-           {errors.firstName && (
+           {errors.code && (
              <p className="errorCode">{`${errors.code.message}`}</p>
             )}
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="subsidary">Subsidary</label>
           <input
           {
-            ...register("lastName"
+            ...register("subsidary"
           )}
           type="text" 
-          id="lastName"
+          id="subsidary"
           />
-           {errors.lastName && (
-             <p className="errorLastName">{`${errors.lastName.message}`}</p>
+           {errors.subsidary && (
+             <p className="errorSubsidary">{`${errors.subsidary.message}`}</p>
             )}
-          <label htmlFor="title">Title</label>
+          <label htmlFor="title">State</label>
           <input
           {
-            ...register("title"
+            ...register("state"
           )}
           type="text" 
-          id="title"
+          id="state"
           />
-           {errors.title && (
-             <p className="errorTitle">{`${errors.title.message}`}</p>
+           {errors.state && (
+             <p className="errorState">{`${errors.state.message}`}</p>
             )}
-          <label htmlFor="department">Department</label>
+          <label htmlFor="company">Company</label>
           <input
           {
-            ...register("department"
+            ...register("company"
           )}
           type="text" 
-          id="department"
+          id="company"
           />
-           {errors.department && (
-             <p className="errorDepartment">{`${errors.department.message}`}</p>
+           {errors.company && (
+             <p className="errorCompany">{`${errors.company.message}`}</p>
             )}
-            <label htmlFor="email">Email</label>
+            <label htmlFor="commercial">Commercial</label>
             <input 
             {
-              ...register("email" 
+              ...register("commercial" 
             )}
-            type="email"  
-            id="email" 
+            type="commercial"  
+            id="commercial" 
             />
-            {errors.email && (
-              <p className="errorEmail">{`${errors.email.message}`}</p>
+            {errors.commercial && (
+              <p className="errorCommercial">{`${errors.commercial.message}`}</p>
             )}
-            <label htmlFor="cellphone">Cellphone</label>
-            <input
-            {
-              ...register("cellphone"
-            )}
-            type="text" 
-            id="cellphone"
-            />
-             {errors.cellphone && (
-               <p className="errorCellphone">{`${errors.cellphone.message}`}</p>
-              )}
-            <label htmlFor="comments">Comments</label>
-            <input
-            {
-              ...register("comments"
-            )}
-            type="text" 
-            id="comments"
-            />
-             {errors.comments && (
-               <p className="errorComments">{`${errors.comments.message}`}</p>
-              )}
-            <label htmlFor="company">Company</label>
-            <input
-            {
-              ...register("company"
-            )}
-            type="text" 
-            id="company"
-            />
-             {errors.company && (
-               <p className="errorCompany">{`${errors.company.message}`}</p>
-              )}
             <label htmlFor="sector">Sector</label>
             <input
             {
@@ -144,9 +113,9 @@ const AddOffer = () => {
             id="sector"
             />
              {errors.sector && (
-               <p className="errorSubSector">{`${errors.sector.message}`}</p>
+               <p className="errorSector">{`${errors.sector.message}`}</p>
               )}
-            <label htmlFor="subSector">Sub Sector</label>
+            <label htmlFor="subsector">Subsector</label>
             <input
             {
               ...register("subsector"
@@ -155,18 +124,7 @@ const AddOffer = () => {
             id="subsector"
             />
              {errors.subsector && (
-               <p className="errorSubSector">{`${errors.subsector.message}`}</p>
-              )}
-            <label htmlFor="address">Sub Sector</label>
-            <input
-            {
-              ...register("address"
-            )}
-            type="text" 
-            id="address"
-            />
-             {errors.address && (
-               <p className="erroraddres">{`${errors.address.message}`}</p>
+               <p className="errorSubsector">{`${errors.subsector.message}`}</p>
               )}
             <label htmlFor="country">Country</label>
             <input
@@ -179,7 +137,62 @@ const AddOffer = () => {
              {errors.country && (
                <p className="errorcountry">{`${errors.country.message}`}</p>
               )}
-            <label htmlFor="country">City</label>
+            <label htmlFor="title">Title</label>
+            <input
+            {
+              ...register("title"
+            )}
+            type="text" 
+            id="title"
+            />
+             {errors.title && (
+               <p className="errorTitle">{`${errors.title.message}`}</p>
+              )}
+            <label htmlFor="offer">Offer</label>
+            <input
+            {
+              ...register("offer"
+            )}
+            type="text" 
+            id="offer"
+            />
+             {errors.offer && (
+               <p className="errorOffer">{`${errors.offer.message}`}</p>
+              )}
+            <label htmlFor="type">Type</label>
+            <input
+            {
+              ...register("type"
+            )}
+            type="text" 
+            id="type"
+            />
+             {errors.type && (
+               <p className="errorType">{`${errors.type.message}`}</p>
+              )}
+            <label htmlFor="amount">Amount</label>
+            <input
+            {
+              ...register("amount"
+            )}
+            type="text" 
+            id="amount"
+            />
+             {errors.amount && (
+               <p className="errorAmount">{`${errors.amount.message}`}</p>
+              )}
+            <label htmlFor="city">City</label>
+            <input
+            {
+              ...register("city"
+            )}
+            type="text" 
+            id="city"
+            />
+             {errors.city && (
+               <p className="errorcity">{`${errors.city.message}`}</p>
+              )}
+            <label htmlFor="city">City</label>
             <input
             {
               ...register("city"
@@ -192,10 +205,14 @@ const AddOffer = () => {
               )}
 
          <button type="submit"  disabled={isSubmitting}>
-          Save
+          <Link to={"/offers"} style={{color:"white",textDecoration: "none"}}>
+            Save
+          </Link>
           </button>
-          <button>
-          Cancel  
+          <button >
+            <Link to={"/offers"} style={{color:"white",textDecoration: "none"}}>
+              Cancel  
+            </Link>
           </button>
       </form>
       <DevTool control={control} />

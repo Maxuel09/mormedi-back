@@ -42,7 +42,7 @@ function Offers() {
     }, []);
 
     return (
-        <div className="containerClients">
+        <div className="containerMain">
             <h1>Offers</h1>
             {offers.length > 0 ? (
                 <ul className="clientList">
@@ -53,7 +53,7 @@ function Offers() {
                             <li className="underline">{offer.probability}</li>
                             <li className="underline"> {offer.state}</li>
                             <li className="underline">{offer.subsidairy}</li>
-                            <Link to={"/addOffer"}>
+                            <Link to={"/offers/addOffer"}>
                                 <li><img src={PencilIcon} alt="pencilLogo" /></li>
                             </Link>             
                         </li>

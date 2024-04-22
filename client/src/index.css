@@ -53,6 +53,7 @@ body {
   flex-direction: column; */
   /* gap: 30px; */
   margin-left: 20px;
+  margin-top: 170px;
 }
 .menu--list .item {
   display: flex;
@@ -97,10 +98,10 @@ body {
   margin-top: 50px;
 }
 
-.sub-header h3 {
+.sub-header h5 {
   display: block;
   padding: 0 10px;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 .admin {
   display: block;
@@ -334,8 +335,8 @@ input:hover {
 
 /* CLIENTS */
 
-.containerClients,
-.containerDashboard {
+
+.containerMain {
   width: 1000px;
   height: 560px;
   background-color: rgb(242, 242, 242);
@@ -348,7 +349,7 @@ input:hover {
   list-style: none;
 }
 
-.containerClients h1 {
+.containerMain h1 {
   padding: 1.5rem;
 }
 .listStyle {
@@ -378,13 +379,7 @@ input:hover {
 }
 
 /* ADD CLIENT */
-
-.temp {
-  margin-top: 200px;
-  margin-right: 400px;
-}
-
-.container-addClient input {
+.containerMain input {
   display: flex;
   width: 320px;
   padding: 10px;
@@ -395,16 +390,24 @@ input:hover {
   margin: 0 auto -5px;
 }
 
-.container-addClient button {
+.containerMain button{
   width: 60px;
   padding: 5px;
   background-color: #1d1b4c;
-  color: white;
+  color: rgb(210, 8, 8);
   font-size: 16px;
   text-align: center;
   border-radius: 2px;
   margin: 30px 30px;
 }
-.container-addClient button:hover {
+.containerMain button:hover {
   background-color: #474780;
 }
+
+/* SEARCHBAR */
+
+.searchbar {
+  margin-bottom: 40px;
+  margin-top: -60px;
+}
+

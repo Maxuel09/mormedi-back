@@ -23,7 +23,7 @@ const Header = () => {
                 <h5>Hi {firstName}, today is {formattedDate}</h5>
                 <img src="src/images/avatarPicture.png" className="avatarPicture" />         
                 <div className="sub-header">
-                    <h3>{firstName}</h3>
+                    <h5>{firstName}</h5>
                     <p className="admin">{role}</p>
                 </div>
             </div>

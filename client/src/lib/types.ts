@@ -36,20 +36,26 @@ export const addClientSchema = z.object({
 export type TaddClientSchema = z.infer<typeof addClientSchema>
 
 export const addOfferSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
-  title: z.string(),
-  department: z.string(),
-  email: z.string(),
-  cellphone: z.number(),
-  comments: z.string(),
+  code: z.string(),
+  subsidary: z.string(),
+  state: z.string(),
   company: z.string(),
-  sector: z.string(),
+  commercial: z.string(),
+  sector: z.number(),
   subsector: z.string(),
-  address: z.string(),
   country: z.string(),
+  title: z.string(),
+  offer: z.string(),
+  type: z.string(),
+  amount: z.number(),
   city: z.string(),
-  postalCode: z.string()
+  postalCode: z.string(),
+  prospectiveDate: z.date(),
+  probability: z.string(),
+  comments: z.string(),
+  responsable: z.string()
+
 })
 
 export type TaddOfferSchema = z.infer<typeof addOfferSchema>
+

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import {Link} from "react-router-dom"
 import PencilIcon from "../assets/pencil.svg"
+import SearchBar from '../components/SearchBar';
 
 type Client =
 {
@@ -42,8 +43,10 @@ function Clients() {
     }, []);
 
     return (
-        <div className="containerClients">
+        <div className="containerMain">
             <h1>Clients</h1>
+                <SearchBar/>
+           
             {clients.length > 0 ? (
                 <ul className="clientList">
                     {clients.map((client: Client) => (
@@ -55,7 +58,7 @@ function Clients() {
                             <li className="underline">{client.department}</li>
                             <li className="underline">State</li>
                             <li className="underline">Commercial</li>
-                            <Link to={"/addClient"}>
+                            <Link to={"/clients/addClient"}>
                                 <li><img src={PencilIcon} alt="pencilLogo" /></li>
                             </Link>             
                         </li>

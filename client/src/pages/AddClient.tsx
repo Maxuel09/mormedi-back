@@ -3,6 +3,7 @@ import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { addClientSchema, TaddClientSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import {Link} from "react-router-dom";
 
 
 
@@ -41,8 +42,8 @@ const AddClient = () => {
   };
   
   return (
-    <div className="temp">
-    <div className="container-addClient">
+    <div className="containerMain">
+      <h1>Add</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="firstName">First Name</label>
           <input
@@ -189,14 +190,17 @@ const AddClient = () => {
               )}
 
          <button type="submit"  disabled={isSubmitting}>
-          Save
+          <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
+              Save
+            </Link>
           </button>
           <button>
-          Cancel  
+            <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
+                Cancel  
+            </Link> 
           </button>
       </form>
       <DevTool control={control} />
-    </div>
     </div>
   );
 };

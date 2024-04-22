@@ -17,10 +17,10 @@ const Sidebar = () => {
           <Link to={"/offers"} className='item'>
           Offers
           </Link>
-          <Link to={""} className='item'>
+          <Link to={"/reports"} className='item'>
           Reports
           </Link>
-          <Link to={""} className='item'>
+          <Link to={"/workteam"} className='item'>
           Work team
           </Link>    
       </div>
