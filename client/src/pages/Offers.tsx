@@ -7,18 +7,16 @@ type Offer =
   id: number,
   title: string,
   amount: number
-  probability:string,
+  sector:string,
   state: string,
-  subsidairy: string
+  company: string,
+  commercial: string
 }
 
 function Offers() {
   
     const [offers, setOffers] = useState([]);
-
-    
-    
-   
+ 
     useEffect(() => {
         const apiUrl = 'http://localhost:3000/offers';
 
@@ -44,17 +42,26 @@ function Offers() {
     return (
         <div className="containerMain">
             <h1>Offers</h1>
+            <ul className='headings'>
+                <li>Title</li>
+                <li>Company</li>
+                <li>Amount</li>
+                <li>Sector</li>
+                <li>State</li>
+                <li>Commercial</li>
+           </ul>
             {offers.length > 0 ? (
                 <ul className="clientList">
                     {offers.map((offer: Offer) => (
                         <li key={offer.id} className="listStyle">                      
                             <li className="underline"> {offer.title}</li>                        
+                            <li className="underline"> {offer.company}</li>                        
                             <li className="underline">{`${offer.amount}€`}</li>
-                            <li className="underline">{offer.probability}</li>
+                            <li className="underline">{offer.sector}</li>
                             <li className="underline"> {offer.state}</li>
-                            <li className="underline">{offer.subsidairy}</li>
+                            <li className="underline">{offer.commercial}</li>
                             <Link to={"/offers/addOffer"}>
-                                <li><img src={PencilIcon} alt="pencilLogo" /></li>
+                                <li><img src={PencilIcon} alt="pencilLogo" style={{paddingTop: "15px"}}/></li>
                             </Link>             
                         </li>
                     ))}

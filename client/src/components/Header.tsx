@@ -1,6 +1,8 @@
+import avatarPicture from "../images/avatarPicture.png"
+
 const Header = () => {
    
-    const firstName = "Richard"
+    const firstName = "Ricardo"
     const role = "admin"
 
     const today = new Date(); 
@@ -21,7 +23,7 @@ const Header = () => {
     return (
             <div className="header">       
                 <h5>Hi {firstName}, today is {formattedDate}</h5>
-                <img src="src/images/avatarPicture.png" className="avatarPicture" />         
+                <img src={avatarPicture} className="avatarPicture" />         
                 <div className="sub-header">
                     <h5>{firstName}</h5>
                     <p className="admin">{role}</p>

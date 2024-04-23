@@ -52,7 +52,15 @@ function Clients() {
         <div className="containerMain">
             <h1>Clients</h1>
             {/* <SearchBox onSearch={handleSearch} />   */}
-           
+           <ul className='headings'>
+            <li>Company</li>
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Title</li>
+            <li>Department</li>
+            <li>State</li>
+            <li>Commercial</li>
+           </ul>
             {clients.length > 0 ? (
                 <ul className="clientList">
                     {clients.map((client: Client) => (
@@ -65,7 +73,7 @@ function Clients() {
                             <li className="underline">State</li>
                             <li className="underline">Commercial</li>
                             <Link to={"/clients/addClient"}>
-                                <li><img src={PencilIcon} alt="pencilLogo" /></li>
+                                <li><img src={PencilIcon} alt="pencilLogo" style={{paddingTop: "15px"}}/></li>
                             </Link>             
                         </li>
                     ))}

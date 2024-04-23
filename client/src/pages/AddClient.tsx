@@ -41,7 +41,7 @@ const AddClient = () => {
   };
   
   return (
-    <div className="containerMain">
+    <div className="containerAdd">
       <h1>Add</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
@@ -194,17 +194,19 @@ const AddClient = () => {
                 )}
               </div>
             </section>
-
-         <button type="submit"  disabled={isSubmitting}>
-          <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
-              Save
-            </Link>
-          </button>
-          <button>
-            <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
-                Cancel  
-            </Link> 
-          </button>
+                <div className="buttons">
+                  <button type="submit"  disabled={isSubmitting}>
+                    <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
+                      Save
+                    </Link>
+                  </button>
+                  <button type="reset">
+                    <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
+                      Cancel  
+                    </Link> 
+                    </button>
+                </div>
+         
       </form>
     </div>
   );
