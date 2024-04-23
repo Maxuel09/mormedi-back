@@ -15,6 +15,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  font-weight: 200;
+}
 /* DASHBOARD */
 
 .dashboard {
@@ -335,7 +339,6 @@ input:hover {
 
 /* CLIENTS */
 
-
 .containerMain {
   width: 1000px;
   height: 560px;
@@ -390,7 +393,7 @@ input:hover {
   margin: 0 auto -5px;
 }
 
-.containerMain button{
+.containerMain button {
   width: 60px;
   padding: 5px;
   background-color: #1d1b4c;
@@ -411,3 +414,13 @@ input:hover {
   margin-top: -60px;
 }
 
+/* POPUP */
+
+.popup {
+  width: 400px;
+  height: 300px;
+  background-color: rgb(103, 93, 145);
+  padding: 0;
+  margin: 0;
+  border: none;
+}

@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
+// import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { addClientSchema, TaddClientSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -10,7 +10,7 @@ import {Link} from "react-router-dom";
 const AddClient = () => {
   
   const {
-    control,
+    // control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -200,7 +200,7 @@ const AddClient = () => {
             </Link> 
           </button>
       </form>
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </div>
   );
 };

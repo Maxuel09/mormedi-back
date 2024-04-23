@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { addOfferSchema, TaddOfferSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -10,7 +9,6 @@ import {Link} from "react-router-dom"
 const AddOffer = () => {
   
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -215,7 +213,6 @@ const AddOffer = () => {
             </Link>
           </button>
       </form>
-      <DevTool control={control} />
     </div>
     </div>
   );

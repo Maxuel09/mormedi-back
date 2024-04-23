@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import {Link} from "react-router-dom"
 import PencilIcon from "../assets/pencil.svg"
-import SearchBar from '../components/SearchBar';
+// import SearchBar from '../components/SearchBar';
+// import Search from '../components/Search';
 
 type Client =
 {
@@ -45,7 +46,8 @@ function Clients() {
     return (
         <div className="containerMain">
             <h1>Clients</h1>
-                <SearchBar/>
+                {/* <SearchBar/>
+                <Search/> */}
            
             {clients.length > 0 ? (
                 <ul className="clientList">
