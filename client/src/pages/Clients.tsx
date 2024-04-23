@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import {Link} from "react-router-dom"
 import PencilIcon from "../assets/pencil.svg"
-// import SearchBar from '../components/SearchBar';
-// import Search from '../components/Search';
+import SearchBox from '../components/SearchBox';
 
 type Client =
 {
@@ -17,6 +16,12 @@ type Client =
 function Clients() {
   
     const [clients, setClients] = useState([]);
+
+    // const Search: React.FC = () => {
+    //     const handleSearch = (query: string) => {
+    //       console.log('Search query:', query);
+    //       // Perform search with the query...
+    //     };
 
     
     
@@ -46,8 +51,7 @@ function Clients() {
     return (
         <div className="containerMain">
             <h1>Clients</h1>
-                {/* <SearchBar/>
-                <Search/> */}
+            {/* <SearchBox onSearch={handleSearch} />   */}
            
             {clients.length > 0 ? (
                 <ul className="clientList">
@@ -72,6 +76,7 @@ function Clients() {
         </div>
     );
 }
+
 
 export default Clients;
 

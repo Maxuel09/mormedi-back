@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  font-weight: 200;
+  font-weight: 400;
 }
 /* DASHBOARD */
 
@@ -382,6 +382,15 @@ input:hover {
 }
 
 /* ADD CLIENT */
+.firstCol {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.secondCol {
+  width: 300px;
+}
+
 .containerMain input {
   display: flex;
   width: 320px;
@@ -405,6 +414,11 @@ input:hover {
 }
 .containerMain button:hover {
   background-color: #474780;
+}
+section {
+  display: flex;
+  padding: 50px;
+  gap: 150px;
 }
 
 /* SEARCHBAR */
