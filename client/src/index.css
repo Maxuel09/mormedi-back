@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Sailes";
-  src: url("./font/Sailec-Light.otf") format("woff2"),
-    url("./font/Sailec-Medium.otf") format("woff");
+  font-family: "Sailec";
+  src: url("./font/Sailec-Light.otf") format("opentype"),
+    url("./font/Sailec-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
