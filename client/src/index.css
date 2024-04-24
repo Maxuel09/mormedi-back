@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Sailec-Light"
+  font-family: "Sailec"
 }
 
 * {
@@ -16,13 +16,13 @@ body {
 }
 
 h1 {
-  font-weight: lighter;
+  font-weight:bolder
 }
 /* DASHBOARD */
 
 .dashboard {
   display: flex;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
   font-size: 16px;
   max-width: 1440px;
   min-height: 1024px;
@@ -210,7 +210,7 @@ input:hover {
   display: block;
   font-size: 16px;
   margin-top: 15px;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
 }
 
 .container-login input {
@@ -258,12 +258,12 @@ input:hover {
   position: absolute;
   top: 110px;
   left: 160px;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
   font-size: 14px;
 }
 .container-login .bottom {
   text-align: center;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
   font-size: 14px;
   text-decoration: none;
   color: black;
@@ -296,7 +296,7 @@ input:hover {
   display: block;
   font-size: 16px;
   margin-top: 15px;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
 }
 
 .container-register input {
@@ -333,12 +333,12 @@ input:hover {
   position: absolute;
   top: 110px;
   left: 155px;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
   font-size: 14px;
 }
 .container-register .bottom {
   text-align: center;
-  font-family: "Sailec-Light";
+  font-family: "Sailec";
   font-size: 14px;
   text-decoration: none;
   color: black;
