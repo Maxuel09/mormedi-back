@@ -23,6 +23,33 @@ const ClientModel = {
         }catch (error) {
             console.log(error);
         }
+    },
+
+    updateClient: async (id, data) => {
+        try {
+            const updatedClient = await prisma.clients.update({
+                where: {
+                    id
+                },
+                data
+            });
+            return updatedClient;
+        }catch (error) {
+            console.log(error);
+        }
+    },
+
+    deleteClient: async (id) => {
+        try {
+            const deletedClient = await prisma.clients.delete({
+                where: {
+                    id
+                }
+            });
+            return deletedClient;
+        }catch (error) {
+            console.log(error);
+        }
     }
 }
 

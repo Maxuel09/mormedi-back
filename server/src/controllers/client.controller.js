@@ -20,6 +20,26 @@ const ClientController = {
         }catch(error) {
             console.log(error);
         }
+    },
+
+    updateClient: async (req, res) => {
+        try {
+            const updatedClient = await ClientModel.updateClient(req.params.id, req.body);
+            res.json(updatedClient);
+            
+        }catch(error) {
+            console.log(error);
+        }
+    },
+
+    deleteClient: async (req, res) => {
+        try {
+            const deletedClient = await ClientModel.deleteClient(req.params.id);
+            res.json(deletedClient);
+            
+        }catch(error) {
+            console.log(error);
+        }
     }
 }
 

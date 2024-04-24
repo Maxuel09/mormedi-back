@@ -4,7 +4,7 @@ CREATE TABLE `users` (
     `first_name` VARCHAR(30) NOT NULL,
     `last_name` VARCHAR(30) NOT NULL,
     `email` VARCHAR(30) NOT NULL,
-    `type_of_rol` BOOLEAN NOT NULL,
+    `type_of_role` BOOLEAN NOT NULL,
     `password` VARCHAR(500) NOT NULL,
 
     UNIQUE INDEX `users_email_key`(`email`),
@@ -15,8 +15,8 @@ CREATE TABLE `users` (
 CREATE TABLE `super_admins` (
     `userId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(30) NOT NULL,
-    `lastname` VARCHAR(30) NOT NULL,
+    `first_name` VARCHAR(30) NOT NULL,
+    `last_name` VARCHAR(30) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -25,8 +25,8 @@ CREATE TABLE `super_admins` (
 CREATE TABLE `admins` (
     `super_adminId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(30) NOT NULL,
-    `lastname` VARCHAR(30) NOT NULL,
+    `first_name` VARCHAR(30) NOT NULL,
+    `last_name` VARCHAR(30) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -35,8 +35,8 @@ CREATE TABLE `admins` (
 CREATE TABLE `clients` (
     `userId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(30) NOT NULL,
-    `lastname` VARCHAR(30) NOT NULL,
+    `first_name` VARCHAR(30) NOT NULL,
+    `last_name` VARCHAR(30) NOT NULL,
     `qualification` VARCHAR(30) NOT NULL,
     `department` VARCHAR(30) NOT NULL,
     `company` VARCHAR(30) NOT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE `subsectors` (
 CREATE TABLE `countries` (
     `clientId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `conuntrie` VARCHAR(30) NOT NULL,
+    `country` VARCHAR(30) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -81,7 +81,8 @@ CREATE TABLE `offers` (
     `clientId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `code` INTEGER NOT NULL,
-    `expected_date` DATE NOT NULL,
+    `amount` INTEGER NOT NULL,
+    `delivery_date` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `place` VARCHAR(30) NOT NULL,
     `importance` INTEGER NOT NULL,
     `comments` TEXT NOT NULL,
@@ -175,7 +176,7 @@ CREATE TABLE `values` (
 CREATE TABLE `reports` (
     `clientId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `stand_by` VARCHAR(100) NOT NULL,
+    `standby` VARCHAR(100) NOT NULL,
     `date_year` DATE NOT NULL,
 
     PRIMARY KEY (`id`)
@@ -194,21 +195,21 @@ CREATE TABLE `winners` (
 CREATE TABLE `losers` (
     `reportId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `lost` VARCHAR(100) NOT NULL,
+    `loss` VARCHAR(100) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `equiment` (
+CREATE TABLE `team` (
     `clientId` INTEGER NOT NULL,
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `initial` VARCHAR(30) NOT NULL,
     `stake` BOOLEAN NOT NULL,
     `capacity` VARCHAR(30) NOT NULL,
     `external` BOOLEAN NOT NULL,
-    `init_data` DATE NOT NULL,
-    `finaly_data` DATE NOT NULL,
+    `start_data` DATE NOT NULL,
+    `finally_data` DATE NOT NULL,
     `active_status` BOOLEAN NOT NULL,
 
     PRIMARY KEY (`id`)
@@ -290,10 +291,10 @@ ALTER TABLE `winners` ADD CONSTRAINT `winners_reportId_fkey` FOREIGN KEY (`repor
 ALTER TABLE `losers` ADD CONSTRAINT `losers_reportId_fkey` FOREIGN KEY (`reportId`) REFERENCES `reports`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `equiment` ADD CONSTRAINT `equiment_clientId_fkey` FOREIGN KEY (`clientId`) REFERENCES `clients`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `team` ADD CONSTRAINT `team_clientId_fkey` FOREIGN KEY (`clientId`) REFERENCES `clients`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `profiles` ADD CONSTRAINT `profiles_teamId_fkey` FOREIGN KEY (`teamId`) REFERENCES `equiment`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `profiles` ADD CONSTRAINT `profiles_teamId_fkey` FOREIGN KEY (`teamId`) REFERENCES `team`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `area` ADD CONSTRAINT `area_areaId_fkey` FOREIGN KEY (`areaId`) REFERENCES `equiment`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `area` ADD CONSTRAINT `area_areaId_fkey` FOREIGN KEY (`areaId`) REFERENCES `team`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
