@@ -22,7 +22,7 @@ const LoginForm = () => {
   });
  
   const onSubmit = async (data: TLoginSchema) => {
-    const response = await axios.post("http://localhost:4000/auth/register", {
+    const response = await axios.post("http://localhost:3000/users", {
       email: data.email,
       password: data.password,
     });

@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
-    "server": "json-server data/db.json"
+    "server": "json-server data/ddb.json"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",

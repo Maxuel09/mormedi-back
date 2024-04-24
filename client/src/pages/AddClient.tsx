@@ -21,18 +21,19 @@ const AddClient = () => {
  
   const onSubmit = async (data:TaddClientSchema ) => {
     const response = await axios.post("http://localhost:3000/clients'", {
+      company: data.company,
       firstName: data.firstName,
       lastName: data.lastName,
       title: data.title,
       department: data.department,
+      commercial: data.commercial,
+      country: data.country,
       email: data.email,
       cellphone: data.cellphone,
       comments: data.comments,
-      company: data.company,
       sector: data.sector,
       subsector: data.subsector,
       address: data.address,
-      country: data.country,
       city: data.city,
       postalCode: data.postalCode
     });
@@ -45,7 +46,19 @@ const AddClient = () => {
       <h1>Add</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
-          <div className="firstCol">
+        <div className="firstCol">
+            <label htmlFor="company">Company</label>
+             <input
+            {
+                ...register("company"
+            )}
+            type="text" 
+            id="company"
+            />
+            {errors.company && (
+              <p className="errorCompany">{`${errors.company.message}`}</p>
+            )}
+          
             <label htmlFor="firstName">First Name</label>
             <input
             {
@@ -126,17 +139,7 @@ const AddClient = () => {
             </div>
 
             <div className="secondCol">
-              <label htmlFor="company">Company</label>
-              <input
-              {
-                ...register("company"
-              )}
-              type="text" 
-              id="company"
-              />
-              {errors.company && (
-                <p className="errorCompany">{`${errors.company.message}`}</p>
-                )}
+              
               <label htmlFor="sector">Sector</label>
               <input
               {

@@ -8,9 +8,11 @@ type Client =
   id: number,
   firstName: string,
   lastName: string
-  qualification: string,
+  title: string,
   department: string,
-  company: string
+  company: string,
+  country: string,
+  commercial: string
 }
 
 function Clients() {
@@ -58,25 +60,29 @@ function Clients() {
             <li>Last Name</li>
             <li>Title</li>
             <li>Department</li>
-            <li>State</li>
+            <li>Country</li>
             <li>Commercial</li>
            </ul>
             {clients.length > 0 ? (
                 <ul className="clientList">
-                    {clients.map((client: Client) => (
-                        <li key={client.id} className="listStyle">                      
-                            <li className="underline"> {client.company}</li>                        
-                            <li className="underline"> {client.firstName}</li>
-                            <li className="underline">{client.lastName}</li>
-                            <li className="underline">{client.qualification}</li>
-                            <li className="underline">{client.department}</li>
-                            <li className="underline">State</li>
-                            <li className="underline">Commercial</li>
-                            <Link to={"/clients/addClient"}>
-                                <li><img src={PencilIcon} alt="pencilLogo" style={{paddingTop: "15px"}}/></li>
-                            </Link>             
-                        </li>
-                    ))}
+                    {clients.map((client: Client) => 
+                          
+                    <li key={client.id} className="listStyle">
+                        <span className="underline">{client.company}</span>
+                        <span className="underline">{client.firstName}</span>
+                        <span className="underline">{client.lastName}</span>
+                        <span className="underline">{client.title}</span>
+                        <span className="underline">{client.department}</span>
+                        <span className="underline">{client.country}</span>
+                        <span className="underline">{client.commercial}</span>
+                        <span>
+                        <Link to="/offers/addOffer">
+                        <img src={PencilIcon} alt="Edit" style={{ paddingTop: "15px" }} />
+                        </Link>
+                        </span>
+                    </li>
+               
+                    )}
                 </ul>
             ) : (
                 <p>No clients found.</p>
@@ -87,5 +93,3 @@ function Clients() {
 
 
 export default Clients;
-
-

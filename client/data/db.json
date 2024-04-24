@@ -81,117 +81,116 @@
       "company": "Research Solutions"
     }
   ],
-    "offers": [
-        {
-            "title": "Project Blue Sky",
-            "company": "Repsol",
-            "amount": 40000,
-            "sector": "petro-chemical",
-            "probability": "high",
-            "state": "Spain",
-            "commercial": "Pedro Suarez"
-        },
-        {
-            "title": "Solar Fields",
-            "company": "Iberdrola",
-            "amount": 37000,
-            "sector": "renewable energy",
-            "probability": "medium",
-            "state": "Spain",
-            "commercial": "Maria Fernandez"
-        },
-        {
-            "title": "Green Innovations",
-            "company": "Endesa",
-            "amount": 32000,
-            "sector": "renewable energy",
-            "probability": "low",
-            "state": "Spain",
-            "commercial": "Javier Garcia"
-        },
-        {
-            "title": "Wind Turbines",
-            "company": "Siemens Gamesa",
-            "amount": 45000,
-            "sector": "wind energy",
-            "probability": "high",
-            "state": "Germany",
-            "commercial": "Hans Schmidt"
-        },
-        {
-            "title": "Hydro Power Project",
-            "company": "EDF",
-            "amount": 38000,
-            "sector": "hydropower",
-            "probability": "medium",
-            "state": "France",
-            "commercial": "Claire Dupont"
-        },
-        {
-            "title": "Geothermal Energy",
-            "company": "Ormat Technologies",
-            "amount": 50000,
-            "sector": "geothermal",
-            "probability": "high",
-            "state": "USA",
-            "commercial": "John Smith"
-        },
-        {
-            "title": "Marine Energy",
-            "company": "Vattenfall",
-            "amount": 42000,
-            "sector": "marine energy",
-            "probability": "medium",
-            "state": "Sweden",
-            "commercial": "Ingrid Johansson"
-        },
-        {
-            "title": "Biofuels",
-            "company": "Shell",
-            "amount": 47000,
-            "sector": "bioenergy",
-            "probability": "high",
-            "state": "Netherlands",
-            "commercial": "Wim van der Meer"
-        },
-        {
-            "title": "Hydrogen Fuel Cells",
-            "company": "BP",
-            "amount": 50000,
-            "sector": "hydrogen",
-            "probability": "medium",
-            "state": "UK",
-            "commercial": "Sarah Roberts"
-        },
-        {
-            "title": "Electric Cars",
-            "company": "Tesla",
-            "amount": 60000,
-            "sector": "electric vehicles",
-            "probability": "high",
-            "state": "USA",
-            "commercial": "Elon Musk"
-        },
-        {
-            "title": "Wave Energy Harvesting",
-            "company": "Ocean Power Technologies",
-            "amount": 36000,
-            "sector": "marine energy",
-            "probability": "medium",
-            "state": "USA",
-            "commercial": "Mark Johnson"
-        },
-        {
-            "title": "Solar Roofing",
-            "company": "Tesla",
-            "amount": 59000,
-            "sector": "solar energy",
-            "probability": "high",
-            "state": "USA",
-            "commercial": "Elon Musk"
-        }
-    ],
-
+  "offers": [
+    {
+      "title": "Project Blue Sky",
+      "company": "Repsol",
+      "amount": 40000,
+      "sector": "petro-chemical",
+      "probability": "high",
+      "state": "Spain",
+      "commercial": "Pedro Suarez"
+    },
+    {
+      "title": "Solar Fields",
+      "company": "Iberdrola",
+      "amount": 37000,
+      "sector": "renewable energy",
+      "probability": "medium",
+      "state": "Spain",
+      "commercial": "Maria Fernandez"
+    },
+    {
+      "title": "Green Innovations",
+      "company": "Endesa",
+      "amount": 32000,
+      "sector": "renewable energy",
+      "probability": "low",
+      "state": "Spain",
+      "commercial": "Javier Garcia"
+    },
+    {
+      "title": "Wind Turbines",
+      "company": "Siemens Gamesa",
+      "amount": 45000,
+      "sector": "wind energy",
+      "probability": "high",
+      "state": "Germany",
+      "commercial": "Hans Schmidt"
+    },
+    {
+      "title": "Hydro Power Project",
+      "company": "EDF",
+      "amount": 38000,
+      "sector": "hydropower",
+      "probability": "medium",
+      "state": "France",
+      "commercial": "Claire Dupont"
+    },
+    {
+      "title": "Geothermal Energy",
+      "company": "Ormat Technologies",
+      "amount": 50000,
+      "sector": "geothermal",
+      "probability": "high",
+      "state": "USA",
+      "commercial": "John Smith"
+    },
+    {
+      "title": "Marine Energy",
+      "company": "Vattenfall",
+      "amount": 42000,
+      "sector": "marine energy",
+      "probability": "medium",
+      "state": "Sweden",
+      "commercial": "Ingrid Johansson"
+    },
+    {
+      "title": "Biofuels",
+      "company": "Shell",
+      "amount": 47000,
+      "sector": "bioenergy",
+      "probability": "high",
+      "state": "Netherlands",
+      "commercial": "Wim van der Meer"
+    },
+    {
+      "title": "Hydrogen Fuel Cells",
+      "company": "BP",
+      "amount": 50000,
+      "sector": "hydrogen",
+      "probability": "medium",
+      "state": "UK",
+      "commercial": "Sarah Roberts"
+    },
+    {
+      "title": "Electric Cars",
+      "company": "Tesla",
+      "amount": 60000,
+      "sector": "electric vehicles",
+      "probability": "high",
+      "state": "USA",
+      "commercial": "Elon Musk"
+    },
+    {
+      "title": "Wave Energy Harvesting",
+      "company": "Ocean Power Technologies",
+      "amount": 36000,
+      "sector": "marine energy",
+      "probability": "medium",
+      "state": "USA",
+      "commercial": "Mark Johnson"
+    },
+    {
+      "title": "Solar Roofing",
+      "company": "Tesla",
+      "amount": 59000,
+      "sector": "solar energy",
+      "probability": "high",
+      "state": "USA",
+      "commercial": "Elon Musk"
+    }
+  ],
   "users": [
     {
       "firstName": "Jan",
@@ -304,7 +303,23 @@
       "email": "bl@gmail.com",
       "password": "123456",
       "role": "user"
-    }  
+    },
+    {
+      "id": "9af4",
+      "firstName": "Hans",
+      "lastName": "Pedersen",
+      "email": "hp@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "9a7b",
+      "email": "jsmit@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "fad5",
+      "email": "jsmit@gmail.com",
+      "password": "678oiuoiuoiuoiuoiu"
+    }
   ]
 }
-

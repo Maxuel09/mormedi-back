@@ -21,6 +21,7 @@ export const addClientSchema = z.object({
   lastName: z.string(),
   title: z.string(),
   department: z.string(),
+  commercial: z.string(),
   email: z.string(),
   cellphone: z.number(),
   comments: z.string(),
