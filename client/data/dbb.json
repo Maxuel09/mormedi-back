@@ -1,18 +1,10 @@
 {
     "offers": [
         {
-          "title": "Project Blue Sky",
-          "company": "Repsol",
-          "amount": 40000,
-          "subsidary": "petro-chemical",
-          "commercial": "Pedro Suarez"
+          
         },
         {
-          "title": "Solar Fields",
-          "company": "Iberdrola",
-          "amount": 37000,
-          "subsidary": "paper industry",
-          "commercial": "Maria Fernandez"
+          
         }
     ]
 }

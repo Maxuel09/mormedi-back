@@ -44,7 +44,7 @@ const AddOffer = () => {
   return (
     <div>
     <div className="containerAdd">
-      <h1>Add</h1>
+      <h1>Add offer</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
           <div className="firstCol">

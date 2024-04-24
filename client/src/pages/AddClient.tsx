@@ -43,7 +43,7 @@ const AddClient = () => {
   
   return (
     <div className="containerAdd">
-      <h1>Add</h1>
+      <h1>Add client</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
         <div className="firstCol">
