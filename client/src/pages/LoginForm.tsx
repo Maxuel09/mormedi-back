@@ -27,7 +27,7 @@ const LoginForm = () => {
       password: data.password,
     });
     console.log(response.data);
-    navigate("/clients")
+    navigate("/")
     reset();
   };
   
@@ -70,7 +70,6 @@ const LoginForm = () => {
             </Link>
           </div>
       </form>
-      <DevTool control={control} />
     </div>
   );
 };

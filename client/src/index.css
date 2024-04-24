@@ -38,7 +38,14 @@ h1 {
   position: absolute;
   top: 130px;
   left: 300px;
+  overflow: scroll;
 }
+.dash {
+   position: fixed;
+   top: 30px;
+   left: 238px;
+}
+
 
 .containerAdd {
   width: 660px;
@@ -47,6 +54,15 @@ h1 {
   position: absolute;
   top: 240px;
   left:485px;
+}
+
+.dashClients {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.dashOffers {
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 
@@ -149,15 +165,18 @@ h1 {
 
 /* SEARCH BOX */
 
-.search-box {
+.searchInput {
   display: flex;
-  background-color: red;
+  /* background-color: red; */
   border: 1px solid rgb(0, 0, 0);
-  line-height: 28px;
   align-items: center;
-  position: relative;
+  position: absolute;
   max-width: 190px;
-  margin: -60px auto 0;
+  height: 40px;
+  top: 20px;
+  left: 400px;
+  padding: 10px;
+  margin-top: 50px;
 }
 
 .input {
@@ -358,10 +377,28 @@ input:hover {
 }
 
 .containerMain h1, .containerAdd h1 {
+  margin-bottom: 20px;
   padding: 1.5rem;
 }
 .listStyle {
   display: flex;
+}
+
+.headingClients, .headingOffers {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+}
+.headingClients button, .headingOffers button {
+  width: 70px;
+  height: 30px;
+  padding: 5px;
+  background-color: #1D1B4C;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 30px -15px 40px 30px
 }
 
 /* CLIENTDETIALS */
@@ -420,8 +457,7 @@ input:hover {
   margin: 0 auto 5px;
 }
 
-.containerMain button, .containerAdd button {
-  width: 120px;
+.buttons button {
   height: 35px;
   padding: 5px;
   background-color: #1D1B4C;
@@ -430,15 +466,17 @@ input:hover {
   text-align: center;
   border-radius: 2px;
 }
-.containerMain button:hover, containerAdd button:hover{
+.containerMain button:hover, .containerAdd button:hover{
   background-color: #474780;
 }
+
 .buttons {
   display: flex;
   justify-content: center;
   gap: 38px;
   margin-top: 30px;
 }
+
 section {
   display: flex;
   padding: 0 37px;

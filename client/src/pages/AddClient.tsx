@@ -20,7 +20,7 @@ const AddClient = () => {
   
  
   const onSubmit = async (data:TaddClientSchema ) => {
-    const response = await axios.post("http://localhost:3000/clients'", {
+    const response = await axios.post("http://localhost:3000/clients", {
       company: data.company,
       firstName: data.firstName,
       lastName: data.lastName,
@@ -125,17 +125,7 @@ const AddClient = () => {
               {errors.cellphone && (
                 <p className="errorCellphone">{`${errors.cellphone.message}`}</p>
                 )}
-              <label htmlFor="comments">Comments</label>
-              <input
-              {
-                ...register("comments"
-              )}
-              type="text" 
-              id="comments"
-              />
-              {errors.comments && (
-                <p className="errorComments">{`${errors.comments.message}`}</p>
-                )}
+              
             </div>
 
             <div className="secondCol">
@@ -162,6 +152,17 @@ const AddClient = () => {
               {errors.subsector && (
                 <p className="errorSubSector">{`${errors.subsector.message}`}</p>
                 )}
+              <label htmlFor="comments">Comments</label>
+              <input
+              {
+                ...register("comments"
+              )}
+              type="text" 
+              id="comments"
+              />
+              {errors.comments && (
+                <p className="errorComments">{`${errors.comments.message}`}</p>
+                )}  
               <label htmlFor="address">Sub Sector</label>
               <input
               {
@@ -198,10 +199,10 @@ const AddClient = () => {
               </div>
             </section>
                 <div className="buttons">
-                  <button type="submit"  disabled={isSubmitting}>
-                    <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
+                  <button type="submit">
+                    {/* <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}> */}
                       Save
-                    </Link>
+                    {/* </Link> */}
                   </button>
                   <button type="reset">
                     <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>

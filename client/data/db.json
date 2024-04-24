@@ -4,81 +4,151 @@
       "id": 1,
       "firstName": "Jan",
       "lastName": "Smit",
-      "qualification": "head of engineering",
-      "department": "engineering",
-      "company": "Red Star"
+      "title": "Head of Engineering",
+      "department": "Engineering",
+      "company": "Red Star",
+      "country": "Netherlands",
+      "commercial": "Anna Wong"
     },
     {
       "id": 2,
-      "firstName": "John",
-      "lastName": "Doe",
-      "qualification": "sales director",
-      "department": "sales",
-      "company": "Blue Ring"
+      "firstName": "Anna",
+      "lastName": "Wong",
+      "title": "Commercial Manager",
+      "department": "Sales",
+      "company": "Blue Ocean",
+      "country": "USA",
+      "commercial": "Sam Lee"
     },
     {
       "id": 3,
-      "firstName": "Emily",
-      "lastName": "Taylor",
-      "qualification": "marketing manager",
-      "department": "marketing",
-      "company": "Green Globe"
+      "firstName": "Sam",
+      "lastName": "Lee",
+      "title": "Senior Developer",
+      "department": "IT",
+      "company": "Green Tech",
+      "country": "UK",
+      "commercial": "Jan Smit"
     },
     {
       "id": 4,
-      "firstName": "Mark",
-      "lastName": "Johnson",
-      "qualification": "IT specialist",
-      "department": "IT",
-      "company": "Tech Wave"
+      "firstName": "Lucy",
+      "lastName": "Adams",
+      "title": "HR Specialist",
+      "department": "HR",
+      "company": "Golden Sun",
+      "country": "Australia",
+      "commercial": "Mia Perez"
     },
     {
       "id": 5,
-      "firstName": "Sophia",
-      "lastName": "Miller",
-      "qualification": "product designer",
-      "department": "design",
-      "company": "Innovate Inc."
+      "firstName": "Mia",
+      "lastName": "Perez",
+      "title": "Sales Executive",
+      "department": "Sales",
+      "company": "Yellow River",
+      "country": "Spain",
+      "commercial": "Anna Wong"
     },
     {
       "id": 6,
-      "firstName": "David",
-      "lastName": "Lee",
-      "qualification": "financial analyst",
-      "department": "finance",
-      "company": "Finance Corp."
+      "firstName": "John",
+      "lastName": "Doe",
+      "title": "Marketing Manager",
+      "department": "Marketing",
+      "company": "Silver Cloud",
+      "country": "Canada",
+      "commercial": "Sam Lee"
     },
     {
       "id": 7,
-      "firstName": "Olivia",
-      "lastName": "Brown",
-      "qualification": "HR manager",
-      "department": "HR",
-      "company": "Blue Sky"
+      "firstName": "Emily",
+      "lastName": "Clark",
+      "title": "Senior Engineer",
+      "department": "Engineering",
+      "company": "Red Star",
+      "country": "USA",
+      "commercial": "Jan Smit"
     },
     {
       "id": 8,
-      "firstName": "James",
-      "lastName": "Wilson",
-      "qualification": "project manager",
-      "department": "project management",
-      "company": "Project Masters"
+      "firstName": "David",
+      "lastName": "Turner",
+      "title": "Chief Financial Officer",
+      "department": "Finance",
+      "company": "Blue Ocean",
+      "country": "Australia",
+      "commercial": "Anna Wong"
     },
     {
       "id": 9,
-      "firstName": "Ava",
-      "lastName": "White",
-      "qualification": "legal advisor",
-      "department": "legal",
-      "company": "Law & Order"
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "title": "Product Designer",
+      "department": "Design",
+      "company": "Green Tech",
+      "country": "UK",
+      "commercial": "Mia Perez"
     },
     {
       "id": 10,
       "firstName": "Michael",
-      "lastName": "Harris",
-      "qualification": "research scientist",
-      "department": "research",
-      "company": "Research Solutions"
+      "lastName": "Anderson",
+      "title": "Project Manager",
+      "department": "Project Management",
+      "company": "Golden Sun",
+      "country": "Spain",
+      "commercial": "David Turner"
+    },
+    {
+      "id": 11,
+      "firstName": "Sophia",
+      "lastName": "Bennett",
+      "title": "Junior Developer",
+      "department": "IT",
+      "company": "Silver Cloud",
+      "country": "Canada",
+      "commercial": "Sam Lee"
+    },
+    {
+      "id": 12,
+      "firstName": "Daniel",
+      "lastName": "White",
+      "title": "Sales Manager",
+      "department": "Sales",
+      "company": "Red Star",
+      "country": "Netherlands",
+      "commercial": "Jan Smit"
+    },
+    {
+      "id": 13,
+      "firstName": "Isabella",
+      "lastName": "Wright",
+      "title": "Operations Specialist",
+      "department": "Operations",
+      "company": "Blue Ocean",
+      "country": "UK",
+      "commercial": "Anna Wong"
+    },
+    {
+      "id": 14,
+      "firstName": "James",
+      "lastName": "Taylor",
+      "title": "Lead Engineer",
+      "department": "Engineering",
+      "company": "Green Tech",
+      "country": "Australia",
+      "commercial": "Mia Perez"
+    },
+    {
+      "id": 15,
+      "firstName": "Olivia",
+      "lastName": "Roberts",
+      "title": "Customer Service",
+      "department": "Customer Service",
+      "company": "Yellow River",
+      "country": "USA",
+      "commercial": "Sam Lee"
     }
   ],
   "offers": [
@@ -95,7 +165,7 @@
       "title": "Solar Fields",
       "company": "Iberdrola",
       "amount": 37000,
-      "sector": "renewable energy",
+      "sector": "energy",
       "probability": "medium",
       "state": "Spain",
       "commercial": "Maria Fernandez"
@@ -104,14 +174,14 @@
       "title": "Green Innovations",
       "company": "Endesa",
       "amount": 32000,
-      "sector": "renewable energy",
+      "sector": " energy",
       "probability": "low",
       "state": "Spain",
       "commercial": "Javier Garcia"
     },
     {
       "title": "Wind Turbines",
-      "company": "Siemens Gamesa",
+      "company": "Gamesa",
       "amount": 45000,
       "sector": "wind energy",
       "probability": "high",
@@ -130,7 +200,7 @@
     {
       "title": "Geothermal Energy",
       "company": "Ormat Technologies",
-      "amount": 50000,
+      "amount": 50,
       "sector": "geothermal",
       "probability": "high",
       "state": "USA",
@@ -139,7 +209,7 @@
     {
       "title": "Marine Energy",
       "company": "Vattenfall",
-      "amount": 42000,
+      "amount": 4.2,
       "sector": "marine energy",
       "probability": "medium",
       "state": "Sweden",
@@ -148,7 +218,7 @@
     {
       "title": "Biofuels",
       "company": "Shell",
-      "amount": 47000,
+      "amount": 4.7,
       "sector": "bioenergy",
       "probability": "high",
       "state": "Netherlands",
@@ -157,25 +227,16 @@
     {
       "title": "Hydrogen Fuel Cells",
       "company": "BP",
-      "amount": 50000,
+      "amount": 500,
       "sector": "hydrogen",
       "probability": "medium",
       "state": "UK",
       "commercial": "Sarah Roberts"
     },
     {
-      "title": "Electric Cars",
-      "company": "Tesla",
-      "amount": 60000,
-      "sector": "electric vehicles",
-      "probability": "high",
-      "state": "USA",
-      "commercial": "Elon Musk"
-    },
-    {
       "title": "Wave Energy Harvesting",
       "company": "Ocean Power Technologies",
-      "amount": 36000,
+      "amount": 36,
       "sector": "marine energy",
       "probability": "medium",
       "state": "USA",
@@ -320,6 +381,23 @@
       "id": "fad5",
       "email": "jsmit@gmail.com",
       "password": "678oiuoiuoiuoiuoiu"
+    },
+    {
+      "id": "0ee9",
+      "email": "kl@gmail.xom",
+      "password": "kl;k;lk;lk"
+    },
+    {
+      "id": "7263",
+      "email": "wim@gmail.com",
+      "password": "k;lk;lk;l"
+    },
+    {
+      "id": "339f",
+      "firstName": "Paolo",
+      "lastName": "de Beck",
+      "email": "wim@gmail.com",
+      "password": "1234567"
     }
   ]
 }
