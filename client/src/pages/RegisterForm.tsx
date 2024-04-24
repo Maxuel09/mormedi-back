@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
-import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import {registerSchema,TRegisterSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,7 +12,6 @@ const RegisterForm = () => {
   const navigate = useNavigate()
 
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -91,7 +89,6 @@ const RegisterForm = () => {
          </button>
          </div>
       </form>
-      <DevTool control={control} />
     </div>
   );
 };

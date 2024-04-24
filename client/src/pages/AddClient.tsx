@@ -199,10 +199,10 @@ const AddClient = () => {
               </div>
             </section>
                 <div className="buttons">
-                  <button type="submit">
-                    {/* <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}> */}
+                  <button type="submit" disabled={isSubmitting}>
+                    <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
                       Save
-                    {/* </Link> */}
+                    </Link>
                   </button>
                   <button type="reset">
                     <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
