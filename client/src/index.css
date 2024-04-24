@@ -1,21 +1,8 @@
 @font-face {
-<<<<<<< Updated upstream
   font-family: "Sailec";
   src: url("./font/Sailec-Light.otf") format("opentype"),
     url("./font/Sailec-Medium.otf") format("opentype");
   font-weight: lighter;
-||||||| Stash base
-  font-family: "Sailes";
-  src: url("./font/Sailec-Light.otf") format("woff2"),
-    url("./font/Sailec-Medium.otf") format("woff");
-  font-weight: normal;
-=======
-  font-family: "Sailes";
-  src: url("./font/Sailec-Light.otf") format("woff2"),
-    url("./font/Sailec-Medium.otf") format("woff");
-  font-weight: 200;
->>>>>>> Stashed changes
-  font-style: normal;
 }
 
 body {
@@ -29,13 +16,7 @@ body {
 }
 
 h1 {
-<<<<<<< Updated upstream
   font-weight: lighter;
-||||||| Stash base
-  font-weight: 400;
-=======
-  font-weight: 200;
->>>>>>> Stashed changes
 }
 /* DASHBOARD */
 
@@ -125,13 +106,7 @@ h1 {
   padding: 40px;
   margin-right: 20px;
   font-size: 18px;
-<<<<<<< Updated upstream
   font-weight: lighter;
-||||||| Stash base
-  font-weight: 400;
-=======
-  font-weight: 200;
->>>>>>> Stashed changes
 }
 .sub-header {
   position: relative;
@@ -396,14 +371,9 @@ input:hover {
   list-style: none;
   margin-left: 30px;
   margin-top: 7px;
-<<<<<<< Updated upstream
-  font-weight: lighter;;
-||||||| Stash base
-  font-weight: 600;;
-=======
-  font-weight: 200;;
->>>>>>> Stashed changes
+  font-weight: lighter;
 }
+
 .headings li {
   width: 135px;
 }
