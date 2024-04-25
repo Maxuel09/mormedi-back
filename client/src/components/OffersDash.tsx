@@ -5,7 +5,7 @@ type Offer = {
   title: string;
   amount: number;
   sector: string;
-  state: string;
+  country: string;
   company: string;
   commercial: string;
 };
@@ -46,7 +46,7 @@ function OffersDash() {
         <li>Company</li>
         <li>Amount</li>
         <li>Sector</li>
-        <li>State</li>
+        <li>Country</li>
         <li>Commercial</li>
       </ul>
       {offers.length > 0 ? (
@@ -57,7 +57,7 @@ function OffersDash() {
               <span className="underline">{offer.company}</span>
               <span className="underline">{`${offer.amount} €`}</span>
               <span className="underline">{offer.sector}</span>
-              <span className="underline">{offer.state}</span>
+              <span className="underline">{offer.country}</span>
               <span className="underline">{offer.commercial}</span>
             </li>
           ))}

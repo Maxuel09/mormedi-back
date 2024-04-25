@@ -34,7 +34,7 @@ function Offers() {
     offer.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     offer.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
     offer.sector.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    offer.state.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    offer.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
     offer.commercial.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
