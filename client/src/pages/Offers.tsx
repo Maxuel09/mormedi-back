@@ -82,7 +82,7 @@ function Offers() {
               <span className="underline">{offer.company}</span>
               <span className="underline" >{`${offer.amount} €`}</span>
               <span className="underline">{offer.sector}</span>
-              <span className="underline">{offer.state}</span>
+              <span className="underline">{offer.country}</span>
               <span className="underline">{offer.commercial}</span>
               <span>
                 <Link to="/offers/addOffer">

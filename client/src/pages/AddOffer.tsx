@@ -31,10 +31,7 @@ const AddOffer = () => {
       country: data.country,
       offer: data.offer,
       type: data.type,
-      prospectiveDate: data.prospectiveDate,
-      probability: data.probability,
-      comments: data.comments,
-      responsable: data.responsable
+      city: data.city
     });
     console.log(response);
     reset();
@@ -138,7 +135,7 @@ const AddOffer = () => {
               id="country"
               />
               {errors.country && (
-                <p className="errorountry">{`${errors.country.message}`}</p>
+                <p className="errorCountry">{`${errors.country.message}`}</p>
                 )}
               <label htmlFor="offer">Offer</label>
               <input

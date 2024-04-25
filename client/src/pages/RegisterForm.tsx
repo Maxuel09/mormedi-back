@@ -5,8 +5,6 @@ import {registerSchema,TRegisterSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 
-
-
 const RegisterForm = () => {
 
   const navigate = useNavigate()

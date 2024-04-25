@@ -62,7 +62,7 @@ export type Offer = {
   title: string;
   amount: string;
   sector: string;
-  state: string;
+  country: string;
   company: string;
   commercial: string;
 };
