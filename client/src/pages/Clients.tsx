@@ -27,7 +27,6 @@ function Clients() {
         fetchClients();
     }, []);
 
-    // Filter the clients based on the search query
     const filteredClients = clients.filter((client:Client) => 
  
             client.firstName.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -87,7 +86,7 @@ function Clients() {
                             <span className="underline">{client.country}</span>
                             <span className="underline">{client.commercial}</span>
                             <span>
-                                <Link to="/offers/addOffer">
+                                <Link to="/clients/addClient">
                                     <img src={PencilIcon} alt="Edit" style={{ paddingTop: "15px" }} />
                                 </Link>
                             </span>

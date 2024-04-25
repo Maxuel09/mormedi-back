@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import PencilIcon from "../assets/pencil.svg";
 import { Offer } from "../lib/types";
 
-
 function Offers() {
   const [offers, setOffers] = useState<Offer[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -71,7 +70,7 @@ function Offers() {
         <li>Company</li>
         <li>Amount</li>
         <li>Sector</li>
-        <li>State</li>
+        <li>Country</li>
         <li>Commercial</li>
         <li>Edit</li>
       </ul>
@@ -81,7 +80,7 @@ function Offers() {
             <li key={offer.id} className="listStyle">
               <span className="underline">{offer.title}</span>
               <span className="underline">{offer.company}</span>
-              <span className="underline">{`${offer.amount} €`}</span>
+              <span className="underline" >{`${offer.amount} €`}</span>
               <span className="underline">{offer.sector}</span>
               <span className="underline">{offer.state}</span>
               <span className="underline">{offer.commercial}</span>

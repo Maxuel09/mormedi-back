@@ -148,8 +148,12 @@ h1 {
   height: 40px;
   border-radius: 50%;
   position: absolute;
-  top: 60px;
-  right: 160px;
+  top: 58px;
+  right: 130px;
+  background-color: #1d1b4c;
+  color: white;
+  text-align: center;
+  padding: 12px 0px;
 }
 
 /* ///////////////////// */
@@ -228,7 +232,7 @@ h1 {
 
 .container-login button[type="submit"]:disabled,
 .container-register button[type="submit"]:disabled {
-  background-color: #be0909;
+  background-color: #dad8d8;
   color: #666;
   cursor: not-allowed;
 }
@@ -255,7 +259,7 @@ h1 {
 }
 
 .error {
-  color: red;
+  color: rgb(219, 219, 219);
   margin-top: 10px;
   padding: 5px;
 }

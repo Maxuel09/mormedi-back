@@ -4,8 +4,6 @@ import { addClientSchema, TaddClientSchema } from "../lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {Link} from "react-router-dom";
 
-
-
 const AddClient = () => {
   
   const {
@@ -17,25 +15,23 @@ const AddClient = () => {
     resolver: zodResolver(addClientSchema),
   });
 
-  
- 
   const onSubmit = async (data:TaddClientSchema ) => {
-    const response = await axios.post("http://localhost:3000/clients", {
+    const response = await axios.post('http://localhost:3000/clients', {
       company: data.company,
       firstName: data.firstName,
       lastName: data.lastName,
       title: data.title,
       department: data.department,
-      commercial: data.commercial,
-      country: data.country,
       email: data.email,
       cellphone: data.cellphone,
-      comments: data.comments,
       sector: data.sector,
       subsector: data.subsector,
+      comments: data.comments,
+      country: data.country,
       address: data.address,
       city: data.city,
-      postalCode: data.postalCode
+      postalCode: data.postalCode,
+      commercial: data.commercial,
     });
     console.log(response);
     reset();
@@ -47,6 +43,7 @@ const AddClient = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
         <div className="firstCol">
+            
             <label htmlFor="company">Company</label>
              <input
             {
@@ -163,7 +160,7 @@ const AddClient = () => {
               {errors.comments && (
                 <p className="errorComments">{`${errors.comments.message}`}</p>
                 )}  
-              <label htmlFor="address">Sub Sector</label>
+              <label htmlFor="address">Address</label>
               <input
               {
                 ...register("address"
@@ -196,10 +193,21 @@ const AddClient = () => {
               {errors.city && (
                 <p className="errorcity">{`${errors.city.message}`}</p>
                 )}
+              <label htmlFor="commercial">Commercial</label>
+              <input
+              {
+                ...register("commercial"
+              )}
+              type="text" 
+              id="commercial"
+              />
+              {errors.commercial && (
+                <p className="errorcommercial">{`${errors.commercial.message}`}</p>
+                )}
               </div>
             </section>
                 <div className="buttons">
-                  <button type="submit" disabled={isSubmitting}>
+                  <button onClick={handleSubmit(onSubmit)} disabled={isSubmitting}>
                     <Link to={"/clients"} style={{color:"white",textDecoration: "none"}}>
                       Save
                     </Link>

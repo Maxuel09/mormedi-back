@@ -1,7 +1,7 @@
 {
   "clients": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Jan",
       "lastName": "Smit",
       "title": "Head of Engineering",
@@ -11,7 +11,7 @@
       "commercial": "Anna Wong"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Anna",
       "lastName": "Wong",
       "title": "Commercial Manager",
@@ -21,7 +21,7 @@
       "commercial": "Sam Lee"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstName": "Sam",
       "lastName": "Lee",
       "title": "Senior Developer",
@@ -31,7 +31,7 @@
       "commercial": "Jan Smit"
     },
     {
-      "id": 4,
+      "id": "4",
       "firstName": "Lucy",
       "lastName": "Adams",
       "title": "HR Specialist",
@@ -41,7 +41,7 @@
       "commercial": "Mia Perez"
     },
     {
-      "id": 5,
+      "id": "5",
       "firstName": "Mia",
       "lastName": "Perez",
       "title": "Sales Executive",
@@ -51,7 +51,7 @@
       "commercial": "Anna Wong"
     },
     {
-      "id": 6,
+      "id": "6",
       "firstName": "John",
       "lastName": "Doe",
       "title": "Marketing Manager",
@@ -61,7 +61,7 @@
       "commercial": "Sam Lee"
     },
     {
-      "id": 7,
+      "id": "7",
       "firstName": "Emily",
       "lastName": "Clark",
       "title": "Senior Engineer",
@@ -71,7 +71,7 @@
       "commercial": "Jan Smit"
     },
     {
-      "id": 8,
+      "id": "8",
       "firstName": "David",
       "lastName": "Turner",
       "title": "Chief Financial Officer",
@@ -81,7 +81,7 @@
       "commercial": "Anna Wong"
     },
     {
-      "id": 9,
+      "id": "9",
       "firstName": "Sarah",
       "lastName": "Johnson",
       "title": "Product Designer",
@@ -91,7 +91,7 @@
       "commercial": "Mia Perez"
     },
     {
-      "id": 10,
+      "id": "10",
       "firstName": "Michael",
       "lastName": "Anderson",
       "title": "Project Manager",
@@ -101,7 +101,7 @@
       "commercial": "David Turner"
     },
     {
-      "id": 11,
+      "id": "11",
       "firstName": "Sophia",
       "lastName": "Bennett",
       "title": "Junior Developer",
@@ -111,7 +111,7 @@
       "commercial": "Sam Lee"
     },
     {
-      "id": 12,
+      "id": "12",
       "firstName": "Daniel",
       "lastName": "White",
       "title": "Sales Manager",
@@ -121,7 +121,7 @@
       "commercial": "Jan Smit"
     },
     {
-      "id": 13,
+      "id": "13",
       "firstName": "Isabella",
       "lastName": "Wright",
       "title": "Operations Specialist",
@@ -131,7 +131,7 @@
       "commercial": "Anna Wong"
     },
     {
-      "id": 14,
+      "id": "14",
       "firstName": "James",
       "lastName": "Taylor",
       "title": "Lead Engineer",
@@ -141,7 +141,7 @@
       "commercial": "Mia Perez"
     },
     {
-      "id": 15,
+      "id": "15",
       "firstName": "Olivia",
       "lastName": "Roberts",
       "title": "Customer Service",
@@ -159,7 +159,8 @@
       "sector": "petro-chemical",
       "probability": "high",
       "state": "Spain",
-      "commercial": "Pedro Suarez"
+      "commercial": "Pedro Suarez",
+      "id": "95b5"
     },
     {
       "title": "Solar Fields",
@@ -168,7 +169,8 @@
       "sector": "energy",
       "probability": "medium",
       "state": "Spain",
-      "commercial": "Maria Fernandez"
+      "commercial": "Maria Fernandez",
+      "id": "9143"
     },
     {
       "title": "Green Innovations",
@@ -177,7 +179,8 @@
       "sector": " energy",
       "probability": "low",
       "state": "Spain",
-      "commercial": "Javier Garcia"
+      "commercial": "Javier Garcia",
+      "id": "ae16"
     },
     {
       "title": "Wind Turbines",
@@ -186,61 +189,68 @@
       "sector": "wind energy",
       "probability": "high",
       "state": "Germany",
-      "commercial": "Hans Schmidt"
+      "commercial": "Hans Schmidt",
+      "id": "18f9"
     },
     {
       "title": "Hydro Power Project",
       "company": "EDF",
-      "amount": 38000,
+      "amount": 380000,
       "sector": "hydropower",
       "probability": "medium",
       "state": "France",
-      "commercial": "Claire Dupont"
+      "commercial": "Claire Dupont",
+      "id": "42a3"
     },
     {
       "title": "Geothermal Energy",
       "company": "Ormat Technologies",
-      "amount": 50,
+      "amount": 5000,
       "sector": "geothermal",
       "probability": "high",
       "state": "USA",
-      "commercial": "John Smith"
+      "commercial": "John Smith",
+      "id": "cf8f"
     },
     {
       "title": "Marine Energy",
       "company": "Vattenfall",
-      "amount": 4.2,
+      "amount": 49000,
       "sector": "marine energy",
       "probability": "medium",
       "state": "Sweden",
-      "commercial": "Ingrid Johansson"
+      "commercial": "Ingrid Johansson",
+      "id": "c139"
     },
     {
       "title": "Biofuels",
       "company": "Shell",
-      "amount": 4.7,
+      "amount": 4700,
       "sector": "bioenergy",
       "probability": "high",
       "state": "Netherlands",
-      "commercial": "Wim van der Meer"
+      "commercial": "Wim van der Meer",
+      "id": "b5e0"
     },
     {
       "title": "Hydrogen Fuel Cells",
       "company": "BP",
-      "amount": 500,
+      "amount": 500000,
       "sector": "hydrogen",
       "probability": "medium",
       "state": "UK",
-      "commercial": "Sarah Roberts"
+      "commercial": "Sarah Roberts",
+      "id": "6722"
     },
     {
       "title": "Wave Energy Harvesting",
       "company": "Ocean Power Technologies",
-      "amount": 36,
+      "amount": 3600,
       "sector": "marine energy",
       "probability": "medium",
       "state": "USA",
-      "commercial": "Mark Johnson"
+      "commercial": "Mark Johnson",
+      "id": "2cbb"
     },
     {
       "title": "Solar Roofing",
@@ -249,7 +259,8 @@
       "sector": "solar energy",
       "probability": "high",
       "state": "USA",
-      "commercial": "Elon Musk"
+      "commercial": "Elon Musk",
+      "id": "7ecf"
     }
   ],
   "users": [
@@ -404,6 +415,55 @@
       "firstName": "Paolo",
       "lastName": "Smti",
       "email": "paolodamen@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "id": "7205",
+      "firstName": "Paolo",
+      "lastName": "Damen",
+      "email": "wim@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3443",
+      "firstName": "Paolo",
+      "lastName": "Damen",
+      "email": "wim@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "f656",
+      "firstName": "Anna",
+      "lastName": "Wong",
+      "email": "awong@yahoo.com",
+      "password": "1234567"
+    },
+    {
+      "id": "57af",
+      "firstName": "Anna",
+      "lastName": "Wong",
+      "email": "awong@yahoo.com",
+      "password": "1234567"
+    },
+    {
+      "id": "fec4",
+      "firstName": "Anna",
+      "lastName": "Wong",
+      "email": "awong@yahoo.com",
+      "password": "1234567"
+    },
+    {
+      "id": "eadb",
+      "firstName": "Anna",
+      "lastName": "Wong",
+      "email": "awong@yahoo.com",
+      "password": "1234567"
+    },
+    {
+      "id": "9f9c",
+      "firstName": "Anna",
+      "lastName": "Wong",
+      "email": "awong@yahoo.com",
       "password": "1234567"
     }
   ]
