@@ -1,9 +1,9 @@
 import TeamModel from "./src/models/offert.model.js"
 
+const TeamController  = {
 
 
-
-      deleteTeam = async (req, res) => {
+      deleteTeam: async (req, res) => {
         try {
           const id = req.params.id;
           const deleteTeam = await TeamModel.deleteTeam(req, res);
@@ -14,7 +14,36 @@ import TeamModel from "./src/models/offert.model.js"
         }
       }
     ,
-    createTeam= async (req, res) => {
+
+    updateTeam: async (req, res) => {
+        try {
+          const updatedTeam = await TeamModel.updateTeam(req, res);
+          res.json(updatedTeam);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+
+    getTeam: async (req, res) => {
+        try {
+          const team = await TeamModel.getTeam(req.params.id);
+          res.json(team);
+        } catch (error) {
+          console.log(error);
+        } 
+      },
+
+    getAllTeams: async (req, res) => {
+        try {
+          const teams = await TeamModel.getAllTeams();
+          res.json(teams);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+
+  
+    createTeam: async (req, res) => {
             const {
                 initial,
                 stake,
@@ -41,5 +70,7 @@ import TeamModel from "./src/models/offert.model.js"
             }
         await TeamModel.createTeam(req, res);
     }
+
+  }
     
   export default TeamController;

@@ -2,8 +2,27 @@ import ReportModel from "./src/models/report.model.js"
 
 
 
+const ReportController = { 
 
-deleteReport = async (req, res) => {
+  getAllReports: async (req, res) => {
+    try {
+      const reports = await ReportModel.getAllReports();
+      res.json(reports);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  createReport: async (req, res) => {
+    try {
+      const newReport = await ReportModel.createReport(req.body);
+      res.json(newReport);
+    } catch (error) {
+      console.log(error);
+    }
+ },
+
+deleteReport : async (req, res) => {
   try {
     const id = req.params.id;
     const deleteReport = await ReportModel.deleteReport(req, res);
@@ -12,26 +31,15 @@ deleteReport = async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-}
-,
-createReport= async (req, res) => {
-      const {
-          stand_by,
-          date_year
-          
-
-      } = req.body;
-      console.log(req.body);
-      if (
-          !stand_by || 
-          !date_year
-          
-      ) {
-          return res 
-          .status(400)
-          .json({mesaje: "pleace provide all trip details"})
-      }
-  await ReportModel.createReport(req, res);
+},
+updateReport: async (req, res) => {
+  try {
+    const updatedReport = await ReportModel.updateReport(req, res);
+    res.json(updatedReport);
+  } catch (error) {
+    console.log(error);
+  }
+},
 }
 
 export default ReportController;

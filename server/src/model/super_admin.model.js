@@ -1,6 +1,6 @@
-import { PrismaOffert } from '@prisma/Super_Admin';
-const prisma = new PrismaSuper_Admin();
+import { PrismaClient } from "@prisma/client";
 
+const prisma = new PrismaClient();
 
 const Super_AdminModel = {
   deleteSuper_Admin: async (req, res) => {

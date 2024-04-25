@@ -1,6 +1,6 @@
-import { PrismaOffert } from '@prisma/team';
-const prisma = new PrismaTeam();
+import { PrismaClient } from "@prisma/client";
 
+const prisma = new PrismaClient();
 
 const TeamModel = {
   deleteTeam: async (req, res) => {
