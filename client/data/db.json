@@ -155,112 +155,12 @@
     {
       "title": "Project Blue Sky",
       "company": "Repsol",
-      "amount": 40000,
+      "amount": "40.000",
       "sector": "petro-chemical",
       "probability": "high",
-      "state": "Spain",
+      "country": "Spain",
       "commercial": "Pedro Suarez",
       "id": "95b5"
-    },
-    {
-      "title": "Solar Fields",
-      "company": "Iberdrola",
-      "amount": 37000,
-      "sector": "energy",
-      "probability": "medium",
-      "state": "Spain",
-      "commercial": "Maria Fernandez",
-      "id": "9143"
-    },
-    {
-      "title": "Green Innovations",
-      "company": "Endesa",
-      "amount": 32000,
-      "sector": " energy",
-      "probability": "low",
-      "state": "Spain",
-      "commercial": "Javier Garcia",
-      "id": "ae16"
-    },
-    {
-      "title": "Wind Turbines",
-      "company": "Gamesa",
-      "amount": 45000,
-      "sector": "wind energy",
-      "probability": "high",
-      "state": "Germany",
-      "commercial": "Hans Schmidt",
-      "id": "18f9"
-    },
-    {
-      "title": "Hydro Power Project",
-      "company": "EDF",
-      "amount": 380000,
-      "sector": "hydropower",
-      "probability": "medium",
-      "state": "France",
-      "commercial": "Claire Dupont",
-      "id": "42a3"
-    },
-    {
-      "title": "Geothermal Energy",
-      "company": "Ormat Technologies",
-      "amount": 5000,
-      "sector": "geothermal",
-      "probability": "high",
-      "state": "USA",
-      "commercial": "John Smith",
-      "id": "cf8f"
-    },
-    {
-      "title": "Marine Energy",
-      "company": "Vattenfall",
-      "amount": 49000,
-      "sector": "marine energy",
-      "probability": "medium",
-      "state": "Sweden",
-      "commercial": "Ingrid Johansson",
-      "id": "c139"
-    },
-    {
-      "title": "Biofuels",
-      "company": "Shell",
-      "amount": 4700,
-      "sector": "bioenergy",
-      "probability": "high",
-      "state": "Netherlands",
-      "commercial": "Wim van der Meer",
-      "id": "b5e0"
-    },
-    {
-      "title": "Hydrogen Fuel Cells",
-      "company": "BP",
-      "amount": 500000,
-      "sector": "hydrogen",
-      "probability": "medium",
-      "state": "UK",
-      "commercial": "Sarah Roberts",
-      "id": "6722"
-    },
-    {
-      "title": "Wave Energy Harvesting",
-      "company": "Ocean Power Technologies",
-      "amount": 3600,
-      "sector": "marine energy",
-      "probability": "medium",
-      "state": "USA",
-      "commercial": "Mark Johnson",
-      "id": "2cbb"
-    },
-    {
-      "title": "Solar Roofing",
-      "company": "Tesla",
-      "amount": 59000,
-      "sector": "solar energy",
-      "probability": "high",
-      "state": "USA",
-      "commercial": "Elon Musk",
-      "id": "7ecf"
     }
   ],
   "users": [
@@ -415,55 +315,6 @@
       "firstName": "Paolo",
       "lastName": "Smti",
       "email": "paolodamen@gmail.com",
-      "password": "1234567"
-    },
-    {
-      "id": "7205",
-      "firstName": "Paolo",
-      "lastName": "Damen",
-      "email": "wim@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "3443",
-      "firstName": "Paolo",
-      "lastName": "Damen",
-      "email": "wim@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "f656",
-      "firstName": "Anna",
-      "lastName": "Wong",
-      "email": "awong@yahoo.com",
-      "password": "1234567"
-    },
-    {
-      "id": "57af",
-      "firstName": "Anna",
-      "lastName": "Wong",
-      "email": "awong@yahoo.com",
-      "password": "1234567"
-    },
-    {
-      "id": "fec4",
-      "firstName": "Anna",
-      "lastName": "Wong",
-      "email": "awong@yahoo.com",
-      "password": "1234567"
-    },
-    {
-      "id": "eadb",
-      "firstName": "Anna",
-      "lastName": "Wong",
-      "email": "awong@yahoo.com",
-      "password": "1234567"
-    },
-    {
-      "id": "9f9c",
-      "firstName": "Anna",
-      "lastName": "Wong",
-      "email": "awong@yahoo.com",
       "password": "1234567"
     }
   ]

@@ -20,12 +20,11 @@ const AddOffer = () => {
   
  
   const onSubmit = async (data:TaddOfferSchema ) => {
-    const response = await axios.post("http://localhost:3000/offers'", {
+    const response = await axios.post("http://localhost:3000/offers", {
       title: data.title,
       company: data.company,
       amount: data.amount,
       subsidary: data.subsidary,
-      state: data.state,
       commercial: data.commercial,
       sector: data.sector,
       subsector: data.subsector,
@@ -48,16 +47,16 @@ const AddOffer = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <section>
           <div className="firstCol">
-            <label htmlFor="code">Title</label>
+            <label htmlFor="title">Title</label>
             <input
             {
-              ...register("code"
+              ...register("title"
             )}
             type="text" 
-            id="code"
+            id="title"
             />
             {errors.title && (
-              <p className="errorCode">{`${errors.title.message}`}</p>
+              <p className="errorTitle">{`${errors.title.message}`}</p>
               )}
             <label htmlFor="company">Company</label>
             <input
@@ -130,10 +129,6 @@ const AddOffer = () => {
               {errors.subsector && (
                 <p className="errorSubsector">{`${errors.subsector.message}`}</p>
                 )}
-             
-
-            
-               
               <label htmlFor="country">Country</label>
               <input
               {
@@ -143,7 +138,7 @@ const AddOffer = () => {
               id="country"
               />
               {errors.country && (
-                <p className="errorcountry">{`${errors.country.message}`}</p>
+                <p className="errorountry">{`${errors.country.message}`}</p>
                 )}
               <label htmlFor="offer">Offer</label>
               <input
@@ -177,7 +172,7 @@ const AddOffer = () => {
               id="city"
               />
               {errors.city && (
-                <p className="errorcity">{`${errors.city.message}`}</p>
+                <p className="errorCity">{`${errors.city.message}`}</p>
                 )}
               </div>
               </section>
@@ -202,5 +197,4 @@ const AddOffer = () => {
 };
 
 export default AddOffer
-
 
