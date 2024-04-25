@@ -1,16 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import PencilIcon from "../assets/pencil.svg";
+import { Offer } from "../lib/types";
 
-type Offer = {
-  id: number;
-  title: string;
-  amount: number;
-  sector: string;
-  state: string;
-  company: string;
-  commercial: string;
-};
 
 function Offers() {
   const [offers, setOffers] = useState<Offer[]>([]);
@@ -57,7 +49,7 @@ function Offers() {
           placeholder="Search offers..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          style={{ marginBottom: "10px" }}
+          style={{border: "1.5px solid lightgrey"}}
         />
         <div className="buttonsTop">
             <button type="submit" className='buttonTop'>

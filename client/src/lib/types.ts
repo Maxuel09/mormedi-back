@@ -58,5 +58,26 @@ export const addOfferSchema = z.object({
 
 })
 
+export type Offer = {
+  id: number;
+  title: string;
+  amount: number;
+  sector: string;
+  state: string;
+  company: string;
+  commercial: string;
+};
+
+export type Client = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  title: string;
+  department: string;
+  company: string;
+  country: string;
+  commercial: string;
+};
+
 export type TaddOfferSchema = z.infer<typeof addOfferSchema>
 

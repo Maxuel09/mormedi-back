@@ -1,5 +1,5 @@
-import ClientsDash from "./ClientsDash"
-import OffersDash from "./OffersDash"
+import ClientsDash from "../components/ClientsDash"
+import OffersDash from "../components/OffersDash"
 
 const Dashboard = () => {
   return (

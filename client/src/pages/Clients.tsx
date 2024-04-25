@@ -1,18 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PencilIcon from '../assets/pencil.svg';
-import ExportCSV from './ExportCSV';
-
-type Client = {
-    id: number;
-    firstName: string;
-    lastName: string;
-    title: string;
-    department: string;
-    company: string;
-    country: string;
-    commercial: string;
-};
+import ExportCSV from '../components/ExportCSV';
+import { Client } from "../lib/types";
 
 function Clients() {
     const [clients, setClients] = useState<Client[]>([]);
@@ -49,20 +39,22 @@ function Clients() {
             client.commercial.toLowerCase().includes(searchQuery.toLowerCase())
         );
     
-
     return (
         <div className="containerMain">
             <div className="headingClients">
                 <h1>Clients</h1>
-                 {/* Search input */}
-                 <input className='searchInput'
+                <div className='inputBorder'>
+                <input className='searchInput'
                     type="text"
                     placeholder="Search clients..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
+                    style={{border: "1.5px solid lightgrey"}}
                 />
+                </div>
+                
                 <div className="buttonsTop"> 
-                    <button style={{backgroundColor: "white", border: "none", marginRight: "30px"}}>
+                    <button style={{backgroundColor: "white", border: "none", marginRight: "20px", marginTop: "-80px"}}>
                          <ExportCSV />                   
                     </button>              
                     <button type="submit">
