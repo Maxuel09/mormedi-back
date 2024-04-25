@@ -55,8 +55,9 @@ export const addOfferSchema = z.object({
   probability: z.string(),
   comments: z.string(),
   responsable: z.string()
-
 })
+
+export type TaddOfferSchema = z.infer<typeof addOfferSchema>
 
 export type Offer = {
   id: number;
@@ -79,5 +80,4 @@ export type Client = {
   commercial: string;
 };
 
-export type TaddOfferSchema = z.infer<typeof addOfferSchema>
 
