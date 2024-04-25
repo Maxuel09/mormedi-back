@@ -6,6 +6,7 @@ const WorkTeam = () => {
     <div className="containerMain">
        <h1>Work Team</h1>
        <PopUp/>
+      
     </div>
   )
 }

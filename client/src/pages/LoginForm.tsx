@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import Logo from '../assets/LogoMormediNegro.png'
-import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { Link, useNavigate} from "react-router-dom";
 import { loginSchema, TLoginSchema } from "../lib/types";
@@ -16,7 +15,6 @@ const LoginForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-    control,
   } = useForm<TLoginSchema>({
     resolver: zodResolver(loginSchema),
   });

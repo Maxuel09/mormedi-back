@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PencilIcon from '../assets/pencil.svg';
+import ExportCSV from './ExportCSV';
 
 type Client = {
     id: number;
@@ -60,13 +61,11 @@ function Clients() {
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                 />
-                <div className="buttonsTop">
+                <div className="buttonsTop"> 
+                    <button style={{backgroundColor: "white", border: "none", marginRight: "30px"}}>
+                         <ExportCSV />                   
+                    </button>              
                     <button type="submit">
-                        <Link to="/offers" style={{ color: "white", textDecoration: "none" }}>
-                            Export
-                        </Link>
-                    </button>
-                    <button type="reset">
                         <Link to="/clients/addClient" style={{ color: "white", textDecoration: "none" }}>
                             Add
                         </Link>
